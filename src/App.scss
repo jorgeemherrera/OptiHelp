@@ -1,3 +1,5 @@
+@import url('./assets/scss/_variables.scss');
+
 .App {
   text-align: center;
   width: 100%;
@@ -9,6 +11,10 @@
   justify-content: center;
   font-family: 'Kanit', sans-serif;
   font-family: 'Russo One', sans-serif;
+  background-color: #D2DAFF;
+  p,li{
+    font-family: 'Source Sans Pro', sans-serif;
+  }
 }
 
 .App-header {
@@ -45,7 +51,7 @@
 }
 
 .poitns-accordion {
-  .section-first-point {
+  .section {
     img {
       width: 300px;
       height: 120px;
