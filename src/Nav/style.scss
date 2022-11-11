@@ -1,0 +1,15 @@
+.navBar{
+    background-color: #7c8af8;
+    width: -webkit-fill-available;
+    position: fixed;
+    border-bottom-right-radius: 5px ;
+    border-bottom-left-radius: 5px ;
+    box-shadow: 0 6px 2px -2px gray;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.navBar img{
+    width: 50px;
+    height: auto;
+}
