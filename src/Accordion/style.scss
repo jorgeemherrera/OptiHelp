@@ -1,0 +1,13 @@
+.inactive{
+    display: none;
+}
+
+.accordion-inactive{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+        padding: 10px;
+    .title-inactive{
+        font-size: 18px;
+    }
+}
