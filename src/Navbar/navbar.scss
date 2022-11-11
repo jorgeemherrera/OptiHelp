@@ -1,7 +1,9 @@
+@import '../assets/scss/variables';
+
 .navigation {
     align-items: center;
     background-color: #fff;
-    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+    box-shadow: 0px -1px 13px 6px $purple-light;
     color: black;
     display: flex;
     height: 60px;
@@ -11,7 +13,7 @@
 }
 
 .brand-name {
-    color: black;
+    color: $blue;
     font-size: 1.3rem;
     margin-left: 1rem;
     text-decoration: none;
