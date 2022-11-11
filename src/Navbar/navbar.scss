@@ -1,0 +1,25 @@
+.navigation {
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+    color: black;
+    display: flex;
+    height: 60px;
+    padding: 0.5rem 0rem;
+    position: relative;
+    width: 100%;
+}
+
+.brand-name {
+    color: black;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+img {
+    margin-left: 1rem;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}

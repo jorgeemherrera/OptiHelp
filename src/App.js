@@ -1,11 +1,11 @@
-import { Nav } from './Nav';
+import { Navbar } from './Navbar';
 import './App.scss';
 import { Accordion } from './Accordion';
 
 function App() {
   return (
     <div className='App'>
-      <Nav />
+      <Navbar />
       <div className='body-accordions'>
         <Accordion
           title="¿QUÉ ES HIGIENE VISUAL?"
