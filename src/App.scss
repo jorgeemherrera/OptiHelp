@@ -11,8 +11,9 @@
   justify-content: center;
   font-family: 'Kanit', sans-serif;
   font-family: 'Russo One', sans-serif;
-  background-color: #D2DAFF;
-  p,li{
+
+  p,
+  li {
     font-family: 'Source Sans Pro', sans-serif;
   }
 }
@@ -51,12 +52,25 @@
 }
 
 .poitns-accordion {
+  .fourth-point {
+    img {
+      width: 300px;
+      height: auto !important;
+      object-fit: initial;
+      border-radius: 10px;
+    }
+  }
   .section {
     img {
       width: 300px;
       height: 120px;
       object-fit: cover;
       border-radius: 10px;
+    }
+
+  
+    .lantern-image {
+      width: auto;
     }
   }
 }
