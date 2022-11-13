@@ -4,6 +4,10 @@
     display: none;
 }
 
+svg {
+    color: #7c8af8;
+    cursor: pointer;
+}
 h1,
 h2,
 h3 {
@@ -42,10 +46,6 @@ p {
     .active {
         justify-content: flex-end;
         width: 100%;
-
-        svg {
-            color: #7c8af8;
-        }
     }
 }
 
