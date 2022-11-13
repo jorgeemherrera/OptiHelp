@@ -12,6 +12,11 @@ import glassOutAr from './assets/images/glassOutAr.png'
 import glassArCon from './assets/images/glassArCon.png'
 import glassArBlue from './assets/images/glassArBlue.png'
 import glassUv from './assets/images/glassUv.png'
+import imageDownloadable from './assets/images/downloadable.png'
+import miopia from './assets/images/miopia.png'
+import astigmatismo from './assets/images/astigmatismo.png'
+import hipermetropia from './assets/images/hipertrofia.png'
+import presbicia from './assets/images/presbicia.png'
 import './App.scss';
 
 function App() {
@@ -86,11 +91,11 @@ function App() {
               <p>Evita trabajar en lugares con baja iluminación para evitar fatiga visual.Evita trabajar en lugares con baja iluminación para evitar fatiga visual.</p>
               <img src={Lantern} alt='' className='lantern-image' />
               <p>Trabaja en ambientes con iluminación artificial y natural, evitando el cansancio ocular</p>
-              <p>Para mayor información…  <a href="/">(aparecerá link para ingresar a la presentación en power point)</a></p>
-              <br />
+              <p>Para mayor información…  <a href="/" target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
               <p>
                 Evita trabajar en lugares con baja iluminación para evitar fatiga visual.Esta app te muestra la  cantidad de iluminación en el lugar donde estás:
-                https://fluxometer.com/rainbow/#!id=iPad%20Pro/2300K-iPad%20Pro
+                <a  target="_blank" href='https://fluxometer.com/rainbow/#!id=iPad%20Pro/2300K-iPad%20Pro'>    Fluxometer
+                </a> <br />
                 Lo que te ayudará a saber si cuentas con la iluminación adecuada en tu lugar de trabajo.
               </p>
             </section>
@@ -99,7 +104,7 @@ function App() {
               <h3>Distancia de Harmmon</h3>
               <p>Consiste en distanciar la pantalla en el espacio existente entre el codo y la muñeca.</p>
               <img src={codoMovil} alt='' />
-              <p>Para mayor información…  <a href="/">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
 
             <section className='section fourth-point'>
@@ -114,7 +119,7 @@ function App() {
                 </li>
               </ul>
               <img src={distanciaMonitor} alt='' />
-              <p>Para mayor información…  <a href="/">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
 
             <section className='section five-point'>
@@ -124,9 +129,8 @@ function App() {
               </p>
               <img src={calefactor} alt='' />
               <h3>No te expongas a temperaturas muy bajas, ni muy altas para no generar cansancio ocular e inestabilidad lagrimal</h3>
-              <p>Para mayor información…  <a href="/">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
-
 
             <section className='section seven-point'>
               <h3>Pausas activas</h3>
@@ -137,34 +141,104 @@ function App() {
               </p>
               <img src={twentyMinutes} alt='' />
               <p>Balancea tú dieta con alimentos ricos en Omega3</p>
-              <p>Para mayor información…  <a href="/">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
 
             <section className='section heigth-point'>
-            <h3>No olvides parpadear</h3>
+              <h3>No olvides parpadear</h3>
               <p>
                 Cuando nos concentramos, disminuimos el parpadeo hasta
                 5 veces por minuto, lo ideal es que parpadeemos entre 15 y 20 veces por minuto,
                 con el fin de proveer lubricación al ojo.
               </p>
               <img src={parpadeo} alt='' />
-              <p>Para mayor información…  <a href="/">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
 
             <section className='section six-point'>
               <h3>Alimentación</h3>
               <p>
-                Consume alimentos ricos en vitamina A (espinacas, papaya, tomate,
-                huevos y mantequilla), C (naranja, limón, piña, fresas, repollo), y E (nueces,
-                almendras, maní y avellanas). Nos ayuda a prevenir inestabilidad ocular.
+                Consume alimentos ricos en vitamina <br />
+                A (espinacas, papaya, tomate,huevos y mantequilla), <br />
+                C (naranja, limón, piña, fresas, repollo), <br />
+                y E (nueces,almendras, maní y avellanas). <br />
+                Nos ayuda a prevenir inestabilidad ocular.<br />
               </p>
               <img src={food} alt='' />
               <h3>Balancea tú dieta con alimentos ricos en Omega3</h3>
-              <p>Para mayor información…  <a href="/">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
 
           </div>
         </Accordion>
+
+        <Accordion
+          title='STICKER DESCARGABLE'
+        >
+          <section className='poitns-accordion'>
+            <img src={imageDownloadable} alt='' />
+            <p>
+              Descarga esta imagen y pégala en un lugar visible en tu entorno de trabajo para que te
+              ayude a recordar que debes descansar tus ojos.
+            </p>
+          </section>
+        </Accordion>
+
+        <Accordion
+          title='ALARMAS'
+          paragraph='
+          Coloca en práctica la regla 20/20/20.
+          Aquí puedes añadir tu horario de trabajo para que cada 20 minutos la alarma te recuerde que debes descansar durante 20 segundos de la pantalla y mirar el sitio mas lejano que haya a tu alrededor
+          '
+        />
+
+        <Accordion
+          title='TEMAS DE INTERÉS'
+        >
+          <section className='poitns-accordion'>
+
+            <div>
+              <h3>¿Qué son los errores refractivos?</h3>
+              <p>
+                Los errores refractivos ocurren cuando el ojo no enfoca la luz en la retina apropiadamente. Esto es llamado refracción. La mayoría de las personas tienen uno o más de ellos y generalmente son fácilmente corregidos con anteojos o lentes de contacto.
+              </p>
+            </div>
+
+            <div>
+              <h3>¿QUÉ ES LA MIOPÍA?</h3>
+              <p>Es uno de los defectos refractivos más frecuentes que produce una visión borrosa al mirar de lejos.</p>
+              <img src={miopia} alt='' />
+              <p>Para mayor información:</p>
+              <a href='https://www.aao.org/salud-ocular/enfermedades/miopia'  target="_blank"> miopia </a>
+            </div>
+
+            <div>
+              <h3>¿QUÉ ES LA HIPERMETROPÍA?</h3>
+              <p>Es menos frecuente que la miopía y produce una mayor visión borrosa al mirar en cerca que en lejos.</p>
+              <img src={hipermetropia} alt='' />
+              <p>Para mayor información:</p>
+              <a href='https://www.aao.org/salud-ocular/enfermedades/hipermetropia'  target="_blank"> hipermetropia </a>
+            </div>
+
+            <div>
+              <h3>¿QUÉ ES EL ASTIGMATISMO?</h3>
+              <p>Con el astigmatismo, el ojo tiene forma de huevo,  Puede ir asociado a miopía, hipermetropía o ser un astigmatismo puro, es decir, no ir asociado a ningún otro defecto refractivo. Produce visión borrosa tanto de lejos como de cerca.</p>
+              <img src={astigmatismo} alt='' />
+              <p>Para mayor información:</p>
+              <a href='https://www.aao.org/salud-ocular/enfermedades/astigmatismo'  target="_blank"> astigmatismo </a>
+            </div>
+
+            <div>
+              <h3>¿QUÉ ES LA PRESBICIA?</h3>
+              <p>Es un defecto refractivo que aparece a partir de los 43-45 años y que produce una mala visión en cerca</p>
+              <img src={presbicia} alt='' />
+              <p>Para mayor información:</p>
+              <a href='https://www.aao.org/salud-ocular/enfermedades/presbicia'  target="_blank"> presbicia </a>
+            </div>
+
+          </section>
+        </Accordion>
+
       </div>
     </div>
   );
