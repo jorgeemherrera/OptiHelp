@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './navbar.scss'
 import logo from '../assets/images/logo-optihelp.png'
 

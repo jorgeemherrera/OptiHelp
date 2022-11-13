@@ -3,10 +3,14 @@
 .inactive {
     display: none;
 }
-h1,h2,h3{
+
+h1,
+h2,
+h3 {
     font-weight: initial;
 }
-p{
+
+p {
     font-weight: initial;
 }
 
@@ -60,7 +64,9 @@ p{
 
     .title-inactive {
         font-size: 18px;
-        margin-right: 50px;
+        margin-right: 56px;
+        text-align: initial;
+        min-width: 216px;
     }
 
     .header {

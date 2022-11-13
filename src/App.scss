@@ -1,4 +1,4 @@
-@import url('./assets/scss/_variables.scss');
+@import '/src/assets/scss/variables';
 
 .App {
   text-align: center;
@@ -15,7 +15,13 @@
   p,
   li {
     font-family: 'Source Sans Pro', sans-serif;
+    overflow-wrap: anywhere;
+    text-align: initial;
   }
+}
+a{
+  text-decoration: none;
+  color: $blue;
 }
 
 .App-header {
