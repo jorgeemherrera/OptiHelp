@@ -17,7 +17,10 @@ import miopia from './assets/images/miopia.png'
 import astigmatismo from './assets/images/astigmatismo.png'
 import hipermetropia from './assets/images/hipertrofia.png'
 import presbicia from './assets/images/presbicia.png'
+import { IconBellRinging } from '@tabler/icons';
+import Modal from './components/Modal';
 import './App.scss';
+import Alert from './components/Alert';
 
 function App() {
   const listAffectations = [
@@ -32,6 +35,7 @@ function App() {
   return (
     <div className='App'>
       <Navbar />
+      <button><IconBellRinging/>Crear Alerta</button>
       <div className='body-accordions'>
         <Accordion
           title="¿QUÉ ES HIGIENE VISUAL?"
@@ -240,6 +244,9 @@ function App() {
         </Accordion>
 
       </div>
+      <Modal title='Configurar Alarma'>
+        <Alert/>
+      </Modal>
     </div>
   );
 }
