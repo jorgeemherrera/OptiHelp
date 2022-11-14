@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './alert.scss';
 
@@ -13,13 +13,19 @@ const Alert = () => {
         } else {
             setEndTime(value)
         }
-        setFormTimeValues(Object.assign({startTime, endTime}));
+        setFormTimeValues(Object.assign({ startTime, endTime }));
         const filteredState = { startTime, endTime };
         localStorage.setItem('formTimeValues', JSON.stringify(filteredState))
     }
 
-    console.log('formTimeValues', formTimeValues)
-
+    useEffect(() => {
+        const inputs = JSON.parse(localStorage.getItem('formTimeValues'));
+        console.log('inputs--->', inputs)
+        if (inputs) {
+            console.log('inputs', inputs)
+            setFormTimeValues(inputs);
+        }
+    }, []);
 
     return (
         <>

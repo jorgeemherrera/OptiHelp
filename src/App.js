@@ -39,7 +39,7 @@ function App() {
   ];
 
   const onHandleClickAlert = () => {
-    setModalState(!modalState)
+    setModalState(!modalState);
   };
 
   return (
