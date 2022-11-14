@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './alert.scss';
 
-const Alert = () => {
+const Alert = ({onClickAlert}) => {
+
     return (
         <>
             <div className='form-container'>
@@ -10,7 +11,7 @@ const Alert = () => {
                 <input type="text" name="startTime" id="startTime" />
                 <label for="startTime">Hora final:</label>
                 <input type="text" name="startTime" id="startTime" />
-                <button className='buttonAlert'>Crear Alerta</button>
+                <button onClick={onClickAlert} className='buttonAlert'>Crear Alerta</button>
             </div>
         </>
     )
@@ -19,5 +20,5 @@ const Alert = () => {
 export default Alert;
 
 Alert.propTypes = {
-
+    onClickAlert: PropTypes.func.isRequired
 }

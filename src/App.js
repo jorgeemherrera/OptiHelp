@@ -21,8 +21,11 @@ import { IconBellRinging } from '@tabler/icons';
 import Modal from './components/Modal';
 import './App.scss';
 import Alert from './components/Alert';
+import { useState } from 'react';
+
 
 function App() {
+  const [modalState, setModalState] = useState(false);
   const listAffectations = [
     "Cansancio visual",
     "Sequedad ocular",
@@ -31,11 +34,16 @@ function App() {
     "Visión borrosa",
     "Alteraciones en usuarios de lentes de contacto",
     "Lagrimeo"
-  ]
+  ];
+
+
+  const onHandleClickAlert = () => {
+    setModalState(!modalState)
+  }
   return (
     <div className='App'>
       <Navbar />
-      <button><IconBellRinging/>Crear Alerta</button>
+      <button onClick={onHandleClickAlert}><IconBellRinging />Crear Alerta</button>
       <div className='body-accordions'>
         <Accordion
           title="¿QUÉ ES HIGIENE VISUAL?"
@@ -98,7 +106,7 @@ function App() {
               <p>Para mayor información…  <a href="/" target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
               <p>
                 Evita trabajar en lugares con baja iluminación para evitar fatiga visual.Esta app te muestra la  cantidad de iluminación en el lugar donde estás:
-                <a  target="_blank" href='https://fluxometer.com/rainbow/#!id=iPad%20Pro/2300K-iPad%20Pro'>    Fluxometer
+                <a target="_blank" href='https://fluxometer.com/rainbow/#!id=iPad%20Pro/2300K-iPad%20Pro'>    Fluxometer
                 </a> <br />
                 Lo que te ayudará a saber si cuentas con la iluminación adecuada en tu lugar de trabajo.
               </p>
@@ -108,7 +116,7 @@ function App() {
               <h3>Distancia de Harmmon</h3>
               <p>Consiste en distanciar la pantalla en el espacio existente entre el codo y la muñeca.</p>
               <img src={codoMovil} alt='' />
-              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/" target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
 
             <section className='section fourth-point'>
@@ -123,7 +131,7 @@ function App() {
                 </li>
               </ul>
               <img src={distanciaMonitor} alt='' />
-              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/" target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
 
             <section className='section five-point'>
@@ -133,7 +141,7 @@ function App() {
               </p>
               <img src={calefactor} alt='' />
               <h3>No te expongas a temperaturas muy bajas, ni muy altas para no generar cansancio ocular e inestabilidad lagrimal</h3>
-              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/" target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
 
             <section className='section seven-point'>
@@ -145,7 +153,7 @@ function App() {
               </p>
               <img src={twentyMinutes} alt='' />
               <p>Balancea tú dieta con alimentos ricos en Omega3</p>
-              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/" target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
 
             <section className='section heigth-point'>
@@ -156,7 +164,7 @@ function App() {
                 con el fin de proveer lubricación al ojo.
               </p>
               <img src={parpadeo} alt='' />
-              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/" target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
 
             <section className='section six-point'>
@@ -170,7 +178,7 @@ function App() {
               </p>
               <img src={food} alt='' />
               <h3>Balancea tú dieta con alimentos ricos en Omega3</h3>
-              <p>Para mayor información…  <a href="/"  target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
+              <p>Para mayor información…  <a href="/" target="_blank">(aparecerá link para ingresar a la presentación en power point)</a></p>
             </section>
 
           </div>
@@ -213,7 +221,7 @@ function App() {
               <p>Es uno de los defectos refractivos más frecuentes que produce una visión borrosa al mirar de lejos.</p>
               <img src={miopia} alt='' />
               <p>Para mayor información:</p>
-              <a href='https://www.aao.org/salud-ocular/enfermedades/miopia'  target="_blank"> miopia </a>
+              <a href='https://www.aao.org/salud-ocular/enfermedades/miopia' target="_blank"> miopia </a>
             </div>
 
             <div>
@@ -221,7 +229,7 @@ function App() {
               <p>Es menos frecuente que la miopía y produce una mayor visión borrosa al mirar en cerca que en lejos.</p>
               <img src={hipermetropia} alt='' />
               <p>Para mayor información:</p>
-              <a href='https://www.aao.org/salud-ocular/enfermedades/hipermetropia'  target="_blank"> hipermetropia </a>
+              <a href='https://www.aao.org/salud-ocular/enfermedades/hipermetropia' target="_blank"> hipermetropia </a>
             </div>
 
             <div>
@@ -229,7 +237,7 @@ function App() {
               <p>Con el astigmatismo, el ojo tiene forma de huevo,  Puede ir asociado a miopía, hipermetropía o ser un astigmatismo puro, es decir, no ir asociado a ningún otro defecto refractivo. Produce visión borrosa tanto de lejos como de cerca.</p>
               <img src={astigmatismo} alt='' />
               <p>Para mayor información:</p>
-              <a href='https://www.aao.org/salud-ocular/enfermedades/astigmatismo'  target="_blank"> astigmatismo </a>
+              <a href='https://www.aao.org/salud-ocular/enfermedades/astigmatismo' target="_blank"> astigmatismo </a>
             </div>
 
             <div>
@@ -237,14 +245,14 @@ function App() {
               <p>Es un defecto refractivo que aparece a partir de los 43-45 años y que produce una mala visión en cerca</p>
               <img src={presbicia} alt='' />
               <p>Para mayor información:</p>
-              <a href='https://www.aao.org/salud-ocular/enfermedades/presbicia'  target="_blank"> presbicia </a>
+              <a href='https://www.aao.org/salud-ocular/enfermedades/presbicia' target="_blank"> presbicia </a>
             </div>
 
           </section>
         </Accordion>
 
       </div>
-      <Modal title='Configurar Alarma'>
+      <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
         <Alert/>
       </Modal>
     </div>

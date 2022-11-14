@@ -3,18 +3,23 @@ import PropTypes from 'prop-types';
 import './modal.scss';
 import { IconPlaystationX } from '@tabler/icons';
 
-const Modal = ({ children, title }) => {
+const Modal = ({ children, title, stateModal, changeModalState }) => {
     return (
         <>
-            <section className='overlay'>
-                <div className='modal-container'>
-                    <div className='modal-header'>
-                        <h3>{title}</h3>
-                    </div>
-                    <IconPlaystationX />
-                    {children}
-                </div>
-            </section>
+            {
+                stateModal ?
+                    <section className='overlay'>
+                        <div className='modal-container'>
+                            <div className='modal-header'>
+                                <h3>{title}</h3>
+                            </div>
+                            <IconPlaystationX onClick={() => changeModalState(false)}/>
+                            {children}
+                        </div>
+                    </section>
+                    : null
+            }
+
         </>
     )
 }
@@ -22,8 +27,8 @@ const Modal = ({ children, title }) => {
 export default Modal;
 
 Modal.propTypes = {
-    id: PropTypes.string,
-    children: PropTypes.any,
-    isOpen: PropTypes.bool,
-    handleClose: PropTypes.func
+    children: PropTypes.any.isRequired,
+    title: PropTypes.string.isRequired,
+    stateModal: PropTypes.bool.isRequired,
+    changeModalState: PropTypes.func
 }
