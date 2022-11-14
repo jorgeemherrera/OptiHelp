@@ -38,6 +38,8 @@ function App() {
     "Lagrimeo"
   ];
 
+  let inputsGetItem = JSON.parse(localStorage.getItem('formTimeValues'));
+
   const onHandleClickAlert = () => {
     setModalState(!modalState);
   };
@@ -329,7 +331,7 @@ function App() {
 
       </div>
       <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
-        <Alert />
+        <Alert inputValues={inputsGetItem}/>
       </Modal>
     </div>
   );
