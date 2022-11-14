@@ -15,9 +15,10 @@ const Accordion = ({
         setClickAccordion(!clickAccordion);
     }
 
+
     return (
         <>
-            <div  className={clickAccordion ? 'header-accordion-active' : 'header-accordion-inactive'}>
+            <div className={clickAccordion ? 'header-accordion-active' : 'header-accordion-inactive'}>
                 <div onClick={togleAccordion} className={clickAccordion ? 'header active' : 'header'}>
                     {!clickAccordion ?
                         <>
@@ -40,7 +41,7 @@ const Accordion = ({
                     <p className='paragraph'>{paragraph}</p>
                     {list &&
                         <ul className="list-ul">
-                            {list.map((text,i) => {
+                            {list.map((text, i) => {
                                 return (
                                     <li key={i}>{text}</li>
                                 );
