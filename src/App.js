@@ -31,6 +31,7 @@ function App() {
     "Alteraciones en usuarios de lentes de contacto",
     "Lagrimeo"
   ]
+
   return (
     <div className='App'>
       <Navbar />
@@ -43,7 +44,6 @@ function App() {
 
           ¿Quieres saber más? Mira la siguiente información
           "
-          urlImage="../src/assets/images/downward-arrow.png"
         />
         <Accordion
           title="AFECTACIONES OCULARES"
@@ -54,8 +54,10 @@ function App() {
           "
           list={listAffectations}
           urlImage="../src/assets/images/downward-arrow.png"
+          id='2'
         />
         <Accordion
+          id='3'
           title="TIPS DE HIGIENE VISUAL"
           paragraph="
             Si queremos disminuir o evitar alguno o varios síntomas mencionados anteriormente,
@@ -70,9 +72,9 @@ function App() {
               >
                 <img src={glassesFirst} alt='girl-with-glasses' />
                 <p>Para mayor información…
-                  <a href="/" target="_blank">
+                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download target="_blank">
                     <IconLink />
-                    (aparecerá link para ingresar a la presentación en power point)
+                    PDF
                   </a>
                 </p>
               </Tab>
@@ -109,14 +111,14 @@ function App() {
                 <img src={Lantern} alt='' className='lantern-image' />
                 <p>Trabaja en ambientes con iluminación artificial y natural, evitando el cansancio ocular</p>
                 <p>Para mayor información…
-                  <a href="/" target="_blank">
+                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download >
                     <IconLink />
-                    (aparecerá link para ingresar a la presentación en power point)
+                    PDF
                   </a>
                 </p>
                 <p>
                   Evita trabajar en lugares con baja iluminación para evitar fatiga visual.Esta app te muestra la  cantidad de iluminación en el lugar donde estás:
-                  <a target="_blank" href='https://fluxometer.com/rainbow/#!id=iPad%20Pro/2300K-iPad%20Pro'>
+                  <a rel="noopener noreferrer" target="_blank" href='https://fluxometer.com/rainbow/#!id=iPad%20Pro/2300K-iPad%20Pro'>
                     <IconLink />
                     Fluxometer
                   </a> <br />
@@ -132,9 +134,9 @@ function App() {
               >
                 <img src={codoMovil} alt='' />
                 <p>Para mayor información…
-                  <a href="/" target="_blank">
+                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    (aparecerá link para ingresar a la presentación en power point)
+                    PDF
                   </a>
                 </p>
               </Tab>
@@ -155,9 +157,9 @@ function App() {
                 </ul>
                 <img src={distanciaMonitor} alt='' />
                 <p>Para mayor información…
-                  <a href="/" target="_blank">
+                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    (aparecerá link para ingresar a la presentación en power point)
+                    PDF
                   </a>
                 </p>
               </Tab>
@@ -171,9 +173,9 @@ function App() {
                 <img src={calefactor} alt='' />
                 <h3>No te expongas a temperaturas muy bajas, ni muy altas para no generar cansancio ocular e inestabilidad lagrimal</h3>
                 <p>Para mayor información…
-                  <a href="/" target="_blank">
+                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    (aparecerá link para ingresar a la presentación en power point)
+                    PDF
                   </a>
                 </p>
               </Tab>
@@ -189,9 +191,9 @@ function App() {
                 <img src={twentyMinutes} alt='' />
                 <p>Balancea tú dieta con alimentos ricos en Omega3</p>
                 <p>Para mayor información…
-                  <a href="/" target="_blank">
+                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    (aparecerá link para ingresar a la presentación en power point)
+                    PDF
                   </a>
                 </p>
               </Tab>
@@ -206,9 +208,9 @@ function App() {
               >
                 <img src={parpadeo} alt='' />
                 <p>Para mayor información…
-                  <a href="/" target="_blank">
+                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    (aparecerá link para ingresar a la presentación en power point)
+                    PDF
                   </a>
                 </p>
               </Tab>
@@ -228,9 +230,9 @@ function App() {
                 <img src={food} alt='' />
                 <h3>Balancea tú dieta con alimentos ricos en Omega3</h3>
                 <p>Para mayor información…
-                  <a href="/" target="_blank">
+                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    (aparecerá link para ingresar a la presentación en power point)
+                    PDF
                   </a>
                 </p>
               </Tab>
@@ -240,10 +242,13 @@ function App() {
         </Accordion>
 
         <Accordion
+          id='4'
           title='STICKER DESCARGABLE'
         >
           <section className='poitns-accordion'>
-            <img src={imageDownloadable} alt='' />
+            <a href={imageDownloadable} download>
+              <img src={imageDownloadable} alt='' />
+            </a>
             <p>
               Descarga esta imagen y pégala en un lugar visible en tu entorno de trabajo para que te
               ayude a recordar que debes descansar tus ojos.
@@ -252,6 +257,7 @@ function App() {
         </Accordion>
 
         <Accordion
+          id='5'
           title='ALARMAS'
           paragraph='
           Coloca en práctica la regla 20/20/20.
@@ -259,6 +265,7 @@ function App() {
           '
         />
         <Accordion
+          id='6'
           title='TEMAS DE INTERÉS'
         >
           <section className='poitns-accordion'>
@@ -276,7 +283,7 @@ function App() {
             >
               <img src={miopia} alt='' />
               <p>Para mayor información:</p>
-              <a href='https://www.aao.org/salud-ocular/enfermedades/miopia' target="_blank">  <IconLink /> miopia </a>
+              <a href='https://www.aao.org/salud-ocular/enfermedades/miopia' rel="noopener noreferrer" target="_blank">  <IconLink /> miopia </a>
             </Tab>
 
             <Tab
@@ -285,7 +292,7 @@ function App() {
             >
               <img src={hipermetropia} alt='' />
               <p>Para mayor información:</p>
-              <a href='https://www.aao.org/salud-ocular/enfermedades/hipermetropia' target="_blank">  <IconLink /> hipermetropia </a>
+              <a rel="noopener noreferrer" href='https://www.aao.org/salud-ocular/enfermedades/hipermetropia' target="_blank">  <IconLink /> hipermetropia </a>
             </Tab>
 
             <Tab
@@ -294,7 +301,7 @@ function App() {
             >
               <img src={astigmatismo} alt='' />
               <p>Para mayor información:</p>
-              <a href='https://www.aao.org/salud-ocular/enfermedades/astigmatismo' target="_blank">   <IconLink /> astigmatismo </a>
+              <a rel="noopener noreferrer" href='https://www.aao.org/salud-ocular/enfermedades/astigmatismo' target="_blank">   <IconLink /> astigmatismo </a>
             </Tab>
 
             <Tab
@@ -303,8 +310,9 @@ function App() {
             >
               <img src={presbicia} alt='' />
               <p>Para mayor información:</p>
-              <a href='https://www.aao.org/salud-ocular/enfermedades/presbicia' target="_blank">  <IconLink /> presbicia </a>
+              <a rel="noopener noreferrer" href='https://www.aao.org/salud-ocular/enfermedades/presbicia' target="_blank">  <IconLink /> presbicia </a>
             </Tab>
+
           </section>
         </Accordion>
 
