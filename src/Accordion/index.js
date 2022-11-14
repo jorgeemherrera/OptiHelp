@@ -17,8 +17,8 @@ const Accordion = ({
 
     return (
         <>
-            <div onClick={togleAccordion} className={clickAccordion ? 'header-accordion-active' : 'header-accordion-inactive'}>
-                <div className={clickAccordion ? 'header active' : 'header'}>
+            <div  className={clickAccordion ? 'header-accordion-active' : 'header-accordion-inactive'}>
+                <div onClick={togleAccordion} className={clickAccordion ? 'header active' : 'header'}>
                     {!clickAccordion ?
                         <>
                             <h1 className='title-inactive'>{title}</h1>
@@ -40,9 +40,9 @@ const Accordion = ({
                     <p className='paragraph'>{paragraph}</p>
                     {list &&
                         <ul className="list-ul">
-                            {list.map((text) => {
+                            {list.map((text,i) => {
                                 return (
-                                    <li>{text}</li>
+                                    <li key={i}>{text}</li>
                                 );
                             })}
                         </ul>
