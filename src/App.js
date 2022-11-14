@@ -1,27 +1,33 @@
-import { Navbar } from './Navbar';
+import './App.scss';
 import { Accordion } from './Accordion';
-import Lantern from './assets/images/lampara.png'
+import { IconBellRinging } from '@tabler/icons';
+import { IconLink } from '@tabler/icons';
+import { Navbar } from './Navbar';
+import { Tab } from './Tabs';
+import { useState } from 'react';
+import Alert from './components/Alert';
+import astigmatismo from './assets/images/astigmatismo.png'
+import calefactor from './assets/images/calefactor.png'
 import codoMovil from './assets/images/harmon.png'
 import distanciaMonitor from './assets/images/postura.png'
-import calefactor from './assets/images/calefactor.png'
 import food from './assets/images/food.png'
-import twentyMinutes from './assets/images/20M.png'
-import parpadeo from './assets/images/parpadeo.png'
+import glassArBlue from './assets/images/glassArBlue.png'
+import glassArCon from './assets/images/glassArCon.png'
 import glassesFirst from './assets/images/glassesFirstPoint.png'
 import glassOutAr from './assets/images/glassOutAr.png'
-import glassArCon from './assets/images/glassArCon.png'
-import glassArBlue from './assets/images/glassArBlue.png'
 import glassUv from './assets/images/glassUv.png'
-import imageDownloadable from './assets/images/downloadable.png'
-import miopia from './assets/images/miopia.png'
-import astigmatismo from './assets/images/astigmatismo.png'
 import hipermetropia from './assets/images/hipertrofia.png'
+import imageDownloadable from './assets/images/downloadable.png'
+import Lantern from './assets/images/lampara.png'
+import miopia from './assets/images/miopia.png'
+import Modal from './components/Modal';
+import parpadeo from './assets/images/parpadeo.png'
 import presbicia from './assets/images/presbicia.png'
-import { IconLink } from '@tabler/icons';
-import './App.scss';
-import { Tab } from './Tabs';
+import twentyMinutes from './assets/images/20M.png'
 
 function App() {
+  const [modalState, setModalState] = useState(false);
+
   const listAffectations = [
     "Cansancio visual",
     "Sequedad ocular",
@@ -30,11 +36,16 @@ function App() {
     "Visión borrosa",
     "Alteraciones en usuarios de lentes de contacto",
     "Lagrimeo"
-  ]
+  ];
+
+  const onHandleClickAlert = () => {
+    setModalState(!modalState)
+  };
 
   return (
     <div className='App'>
       <Navbar />
+      <button onClick={onHandleClickAlert}><IconBellRinging />Crear Alerta</button>
       <div className='body-accordions'>
         <Accordion
           title="¿QUÉ ES HIGIENE VISUAL?"
@@ -317,6 +328,9 @@ function App() {
         </Accordion>
 
       </div>
+      <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
+        <Alert />
+      </Modal>
     </div>
   );
 }
