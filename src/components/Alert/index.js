@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './alert.scss';
 
-const Alert = ({inputValues}) => {
+const Alert = ({ inputValues }) => {
+    // Formulario
     const [startTime, setStartTime] = useState();
     const [endTime, setEndTime] = useState();
     const [formTimeValues, setFormTimeValues] = useState({});
+    // GetItem de Local Storage
     const [startValue, setStartValue] = useState();
     const [endValue, setEndValue] = useState();
+
     const onChangeInputTime = (value, name) => {
         if (name === 'startTime') {
             setStartTime(value)
@@ -20,11 +23,39 @@ const Alert = ({inputValues}) => {
     }
 
     useEffect(() => {
+        // App como prop
         if (inputValues) {
             setStartValue(inputValues.startTime);
             setEndValue(inputValues.endTime)
         }
-    }, []);
+    }, [inputValues]);
+
+    // Esta funcion convierte el tiempo 4:34 en milisegundos
+    const convertTimeToMilliseconds = (value) => {
+        return (+value[0] * (60000 * 60)) + (+value[1] * 60000)
+    }
+
+    let today = new Date();
+    let timeNow = today.getHours() + ":" + today.getMinutes();
+    let startTimeMilliseconds = (convertTimeToMilliseconds(String(startValue).split(":")));
+    let endTimeMilliseconds = (convertTimeToMilliseconds(String(endValue).split(":")));
+    let timeNowMilliseconds = (convertTimeToMilliseconds(String(timeNow).split(":")));
+
+    console.log('startTimeMilliseconds, endTimeMilliseconds, timeNowMilliseconds', startTimeMilliseconds, endTimeMilliseconds, timeNowMilliseconds);
+
+    const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + (i * step));
+
+    let hoursRange = range(startTimeMilliseconds, endTimeMilliseconds, 120000); // 120000 -> este lo puede cambiar por lo quiera en milisegundos
+
+    let foundTimeInRange = hoursRange.find(timeAlert => timeAlert === timeNowMilliseconds);
+
+    if (foundTimeInRange) {
+        //TODO: crear componente custom para un toaster o alerta // investigar en google
+        //<Toast message ="¡¡Es hora de descansar tus ojos!!! Recuerda mirar a 6 metros durante 20 segundos"/>
+        alert('¡¡¡Es hora de descansar tus ojos!!! Recuerda mirar a 6 metros durante 20 segundos')
+    }
+
+    console.log('found', foundTimeInRange)
 
     return (
         <>
