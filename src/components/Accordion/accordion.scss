@@ -8,6 +8,7 @@ svg {
     color: #7c8af8;
     cursor: pointer;
 }
+
 h1,
 h2,
 h3 {
@@ -32,7 +33,7 @@ p {
     margin-bottom: 20px;
 
     .title-inactive {
-        font-size: 18px;
+        font-size: 1rem;
         margin-right: 50px;
     }
 
@@ -63,7 +64,7 @@ p {
     box-shadow: 0px 9px 20px 2px #dee2f1;
 
     .title-inactive {
-        font-size: 18px;
+        font-size: 0.9rem;
         margin-right: 56px;
         text-align: initial;
         min-width: 216px;
@@ -94,9 +95,9 @@ p {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-
         li {
             max-width: 262px;
+            line-height: 20px;
         }
     }
 }
