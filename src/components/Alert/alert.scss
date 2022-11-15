@@ -23,21 +23,21 @@
 
 .toast-container,
 .container--top-right {
-  top: 0;
+  align-items: center;
   background-color: rgba(229, 237, 237, 0.76);
-  height: 100%;
-  transform: translateX(0);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100%;
   justify-content: space-between;
-
+  padding: 0 1rem;
+  top: 0;
+  transform: translateX(0);
   .Toastify__toast {
+    border-radius: 5px;
     color: #707c83;
-    top: 212px;
     max-width: 441px;
+    top: 350px;
     width: 100%;
   }
-
 }
 

@@ -136,7 +136,7 @@ function App() {
                 </p>
                 <p>
                   Esta
-                  <a style={{ marginRight:"7px" }} rel="noopener noreferrer" target="_blank" href='https://play.google.com/store/apps/details?id=crunchybytebox.lightmeter'>
+                  <a style={{ marginRight: "7px" }} rel="noopener noreferrer" target="_blank" href='https://play.google.com/store/apps/details?id=crunchybytebox.lightmeter'>
                     <IconLink />
                     App
                   </a>
@@ -251,18 +251,28 @@ function App() {
                 titleTab='Alimentación'
               >
                 <p>
-                  Consume alimentos ricos en vitamina <br />
-                  A (espinacas, papaya, tomate,huevos y mantequilla), <br />
-                  C (naranja, limón, piña, fresas, repollo), <br />
-                  y E (nueces,almendras, maní y avellanas). <br />
-                  Nos ayuda a prevenir inestabilidad ocular.<br />
+                  Alimentarnos va mucho más allá que consumir alimentos, es
+                  necesario adquirir alimentos sanos y equilibrados, por ejemplo, la dieta
+                  mediterránea, ha sido declarada como Patrimonio Cultural Inmaterial de la
+                  Humanidad.
+                  <p>La Dieta Mediterránea incluye:</p>
+                  <ul>
+                    <li>Vegetales de hojas verdes y frutas coloridas</li>
+                    <li>Frutos secos como almendras y nueces</li>
+                    <li>Mariscos como la principal fuente de carne</li>
+                    <li>Grasas saludables. Elija aceite de oliva en vez de la mantequilla</li>
+                    <li>Pan, cereales y pastas integrales</li>
+                    <li>Agregar muchas hierbas y especias a los alimentos para reducir la ingesta de</li>
+                    sal
+                    <li>Cantidad moderada de lácteos (yogurt y queso) y huevos.</li>
+                  </ul>
                 </p>
                 <img src={food} alt='' />
                 <h3>Balancea tú dieta con alimentos ricos en Omega3</h3>
                 <p>Para mayor información…
-                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
+                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener">
                     <IconLink />
-                    PDF
+                    PPTX
                   </a>
                 </p>
               </Tab>
@@ -288,12 +298,9 @@ function App() {
 
         <Accordion
           title='ALARMAS'
-          paragraph='
-          Coloca en práctica la regla 20/20/20.
-          Aquí puedes añadir tu horario de trabajo para que cada 20 minutos la alarma te recuerde que debes descansar durante 20 segundos de la pantalla y mirar el sitio mas lejano que haya a tu alrededor
-          '
           id={idsAccordions[4]}
-        />
+        ><p>Coloca en práctica la regla 20/20/20. <br /><br />
+            <strong>En la parte superior podrás añadir</strong> tu horario de trabajo para que cada 20 minutos la alarma te recuerde que debes descansar durante 20 segundos de la pantalla y mirar el sitio mas lejano que haya a tu alrededor</p></Accordion>
         <Accordion
           title='TEMAS DE INTERÉS'
           id={idsAccordions[5]}
