@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { IconBellRinging } from '@tabler/icons';
 
 import './alert.scss';
 
-const Alert = ({ inputValues }) => {
+const Alert = ({ inputValues, closeModal }) => {
     const [startTime, setStartTime] = useState();
     const [endTime, setEndTime] = useState();
     const [formTimeValues, setFormTimeValues] = useState({});
@@ -35,7 +36,7 @@ const Alert = ({ inputValues }) => {
                 <input type="time" name="startTime" id="startTime" value={startValue} onChange={e => onChangeInputTime(e.target.value, 'startTime')} />
                 <label for="endTime">Hora final:</label>
                 <input type="time" name="endTime" id="endTime" value={endValue} onChange={e => onChangeInputTime(e.target.value, 'endTime')} />
-                <button className='buttonAlert' >Crear Alerta</button>
+                <button className='button-alert' onClick={closeModal}><IconBellRinging /> Crear Alerta</button>
             </div>
         </>
     )
@@ -44,5 +45,6 @@ const Alert = ({ inputValues }) => {
 export default Alert;
 
 Alert.propTypes = {
-    inputValues: PropTypes.object.isRequired
+    inputValues: PropTypes.object.isRequired,
+    closeModal: PropTypes.func.isRequired
 }
