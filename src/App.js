@@ -1,10 +1,14 @@
+import React, { useState, useEffect } from 'react';
 import './App.scss';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { Accordion } from './components/Accordion';
 import { IconBellRinging } from '@tabler/icons';
 import { IconLink } from '@tabler/icons';
 import { Navbar } from './components/Navbar';
 import { Tab } from './components/Tabs'
-import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+
 import Alert from './components/Alert';
 import astigmatismo from './assets/images/astigmatismo.png'
 import calefactor from './assets/images/calefactor.png'
@@ -25,9 +29,10 @@ import parpadeo from './assets/images/parpadeo.png'
 import presbicia from './assets/images/presbicia.png'
 import twentyMinutes from './assets/images/20M.png'
 
-
 function App() {
+  const [endValue, setEndValue] = useState();
   const [modalState, setModalState] = useState(false);
+  const [startValue, setStartValue] = useState();
   const idsAccordions = [1, 2, 3, 4, 5, 6]
 
   const listAffectations = [
@@ -41,10 +46,54 @@ function App() {
 
   let inputsGetItem = JSON.parse(localStorage.getItem('formTimeValues'));
 
+  useEffect(() => {
+    // App como prop
+    if (inputsGetItem) {
+      setStartValue(inputsGetItem.startTime);
+      setEndValue(inputsGetItem.endTime)
+    }
+  }, [inputsGetItem]);
+
   const onHandleClickAlert = () => {
     setModalState(!modalState);
   };
 
+  const convertTimeToMilliseconds = (value) => {
+    return (+value[0] * (60000 * 60)) + (+value[1] * 60000)
+  }
+
+  let today = new Date();
+  let timeNow = today.getHours() + ":" + today.getMinutes();
+  let startTimeMilliseconds = (convertTimeToMilliseconds(String(startValue).split(":")));
+  let endTimeMilliseconds = (convertTimeToMilliseconds(String(endValue).split(":")));
+  let timeNowMilliseconds = (convertTimeToMilliseconds(String(timeNow).split(":")));
+
+  console.log('startTimeMilliseconds, endTimeMilliseconds, timeNowMilliseconds', startTimeMilliseconds, endTimeMilliseconds, timeNowMilliseconds);
+
+  const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + (i * step));
+
+  let hoursRange = range(startTimeMilliseconds, endTimeMilliseconds, 60000);
+
+  const foundTimeToRange = () => {
+    let foundTimeInRange = hoursRange.find(timeAlert => timeAlert === timeNowMilliseconds);
+  
+    if (foundTimeInRange) {
+      toast.info('¡¡¡Es hora de descansar tus ojos!!! Recuerda mirar a 6 metros durante 20 segundos', {
+        position: toast.POSITION.TOP_RIGHT
+      });
+    } else {
+      return false
+    }
+    console.log('found', foundTimeInRange)
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      foundTimeToRange();
+      console.log('This will run every minute', foundTimeToRange);
+    }, 61000);
+    return () => clearInterval(interval);
+  });
 
   return (
     <div className='App'>
@@ -357,6 +406,9 @@ function App() {
       <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
         <Alert inputValues={inputsGetItem} />
       </Modal>
+      <ToastContainer
+        className="toast-container"
+      />
     </div>
   );
 }
