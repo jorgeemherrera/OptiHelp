@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/optihelp/static/css/main.c204ad96.css",
-    "main.js": "/optihelp/static/js/main.8f3b4c50.js",
+    "main.css": "/optihelp/static/css/main.579174ca.css",
+    "main.js": "/optihelp/static/js/main.eae9fad4.js",
     "static/js/787.64849957.chunk.js": "/optihelp/static/js/787.64849957.chunk.js",
     "static/media/food.png": "/optihelp/static/media/food.eb72a765f6ae83588ed4.png",
     "static/media/harmon.png": "/optihelp/static/media/harmon.aa4fea2230f722d54800.png",
@@ -22,12 +22,12 @@
     "static/media/miopia.png": "/optihelp/static/media/miopia.02ce914b337d835839a6.png",
     "static/media/logo-optihelp.png": "/optihelp/static/media/logo-optihelp.12e06b5c923bd9c82c01.png",
     "index.html": "/optihelp/index.html",
-    "main.c204ad96.css.map": "/optihelp/static/css/main.c204ad96.css.map",
-    "main.8f3b4c50.js.map": "/optihelp/static/js/main.8f3b4c50.js.map",
+    "main.579174ca.css.map": "/optihelp/static/css/main.579174ca.css.map",
+    "main.eae9fad4.js.map": "/optihelp/static/js/main.eae9fad4.js.map",
     "787.64849957.chunk.js.map": "/optihelp/static/js/787.64849957.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c204ad96.css",
-    "static/js/main.8f3b4c50.js"
+    "static/css/main.579174ca.css",
+    "static/js/main.eae9fad4.js"
   ]
 }
