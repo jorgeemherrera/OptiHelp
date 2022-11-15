@@ -89,9 +89,9 @@ function App() {
               >
                 <img src={glassesFirst} alt='girl-with-glasses' />
                 <p>Para mayor información…
-                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download target="_blank">
+                  <a href="https://docs.google.com/presentation/d/1ukrvgpbeznMP3eVj0eKwH4WGq2zG3CTn/edit?usp=share_link&ouid=100274034297964109111&rtpof=true&sd=true " rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    PDF
+                    PPTX
                   </a>
                 </p>
               </Tab>
@@ -118,6 +118,12 @@ function App() {
                 <p>Lente con AR de protección a la luz azul</p>
                 <img src={glassUv} alt='glass-whit-out-ar' />
                 <p>Lente que se oscurece en el sol y permite protección de los rayos UV</p>
+                <p>Para mayor información…
+                  <a href="https://docs.google.com/presentation/d/1ukrvgpbeznMP3eVj0eKwH4WGq2zG3CTn/edit?usp=share_link&ouid=100274034297964109111&rtpof=true&sd=true " rel="noopener noreferrer" target="_blank">
+                    <IconLink />
+                    PPTX
+                  </a>
+                </p>
               </Tab>
             </section>
 
@@ -129,9 +135,9 @@ function App() {
                 <img src={Lantern} alt='' className='lantern-image' />
                 <p>Trabaja en ambientes con iluminación artificial y natural, evitando el cansancio ocular</p>
                 <p>Para mayor información…
-                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download >
+                  <a href="https://docs.google.com/presentation/d/1ukrvgpbeznMP3eVj0eKwH4WGq2zG3CTn/edit?usp=share_link&ouid=100274034297964109111&rtpof=true&sd=true " rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    PDF
+                    PPTX
                   </a>
                 </p>
                 <p>
@@ -164,9 +170,9 @@ function App() {
               >
                 <img src={codoMovil} alt='' />
                 <p>Para mayor información…
-                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
+                  <a href="https://docs.google.com/presentation/d/1ukrvgpbeznMP3eVj0eKwH4WGq2zG3CTn/edit?usp=share_link&ouid=100274034297964109111&rtpof=true&sd=true " rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    PDF
+                    PPTX
                   </a>
                 </p>
               </Tab>
@@ -187,9 +193,9 @@ function App() {
                 </ul>
                 <img src={distanciaMonitor} alt='' />
                 <p>Para mayor información…
-                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
+                  <a href="https://docs.google.com/presentation/d/1ukrvgpbeznMP3eVj0eKwH4WGq2zG3CTn/edit?usp=share_link&ouid=100274034297964109111&rtpof=true&sd=true " rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    PDF
+                    PPTX
                   </a>
                 </p>
               </Tab>
@@ -203,9 +209,9 @@ function App() {
                 <img src={calefactor} alt='' />
                 <h3>No te expongas a temperaturas muy bajas, ni muy altas para no generar cansancio ocular e inestabilidad lagrimal</h3>
                 <p>Para mayor información…
-                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
+                  <a href="https://docs.google.com/presentation/d/1ukrvgpbeznMP3eVj0eKwH4WGq2zG3CTn/edit?usp=share_link&ouid=100274034297964109111&rtpof=true&sd=true " rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    PDF
+                    PPTX
                   </a>
                 </p>
               </Tab>
@@ -221,9 +227,9 @@ function App() {
                 <img src={twentyMinutes} alt='' />
                 <p>Balancea tú dieta con alimentos ricos en Omega3</p>
                 <p>Para mayor información…
-                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
+                  <a href="https://docs.google.com/presentation/d/1ukrvgpbeznMP3eVj0eKwH4WGq2zG3CTn/edit?usp=share_link&ouid=100274034297964109111&rtpof=true&sd=true " rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    PDF
+                    PPTX
                   </a>
                 </p>
               </Tab>
@@ -238,9 +244,9 @@ function App() {
               >
                 <img src={parpadeo} alt='' />
                 <p>Para mayor información…
-                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener noreferrer" target="_blank">
+                  <a href="https://docs.google.com/presentation/d/1ukrvgpbeznMP3eVj0eKwH4WGq2zG3CTn/edit?usp=share_link&ouid=100274034297964109111&rtpof=true&sd=true " rel="noopener noreferrer" target="_blank">
                     <IconLink />
-                    PDF
+                    PPTX
                   </a>
                 </p>
               </Tab>
@@ -270,7 +276,7 @@ function App() {
                 <img src={food} alt='' />
                 <h3>Balancea tú dieta con alimentos ricos en Omega3</h3>
                 <p>Para mayor información…
-                  <a href="./assets/pdf/Optihelp-MAYOR INFORMACION.pptx" download rel="noopener">
+                  <a href="https://docs.google.com/presentation/d/1ukrvgpbeznMP3eVj0eKwH4WGq2zG3CTn/edit?usp=share_link&ouid=100274034297964109111&rtpof=true&sd=true " rel="noopener noreferrer" target="_blank">
                     <IconLink />
                     PPTX
                   </a>
