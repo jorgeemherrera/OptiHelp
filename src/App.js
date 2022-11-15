@@ -408,7 +408,7 @@ function App() {
 
       </div>
       <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
-        <Alert inputValues={inputsGetItem} />
+        <Alert inputValues={inputsGetItem} closeModal={() => setModalState(false)}/>
       </Modal>
       <ToastContainer
         className="toast-container"
