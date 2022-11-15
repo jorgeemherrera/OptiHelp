@@ -82,13 +82,13 @@ function App() {
         position: toast.POSITION.TOP_RIGHT
       });
     }
-    console.log('found', foundTimeInRange)
+    console.log('foundTimeInRange', foundTimeInRange)
   }
 
   useEffect(() => {
     const interval = setInterval(() => {
       foundTimeToRange();
-      console.log('This will run every minute', foundTimeToRange);
+      console.log('foundTimeToRange', foundTimeToRange());
     }, 61000);
     return () => clearInterval(interval);
   });
