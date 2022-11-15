@@ -50,7 +50,7 @@ function App() {
   return (
     <div className='App'>
       <Navbar />
-      <button onClick={onHandleClickAlert}><IconBellRinging />Crear Alerta</button>
+      <button className='create-alert' onClick={onHandleClickAlert}><IconBellRinging />Crear Alerta</button>
       <div className='body-accordions'>
         <Accordion
           title="¿QUÉ ES HIGIENE VISUAL?"

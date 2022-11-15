@@ -20,14 +20,14 @@
     position: relative;
     width: 80vw;
     svg {
-        color: $purple-blue-light;
+        color: $blue;
         height: 20px;
         position: absolute;
         right: 20px;
         top: 20px;
         width: 20px;
         &:hover {
-            color: $purple-blue;
+            color: $blue;
         }
     }
 }
