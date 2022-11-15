@@ -23,7 +23,7 @@ const Alert = ({ inputValues }) => {
         const filteredState = { startTime, endTime };
         localStorage.setItem('formTimeValues', JSON.stringify(filteredState))
     }
-
+    
     useEffect(() => {
         // App como prop
         if (inputValues) {
@@ -47,7 +47,7 @@ const Alert = ({ inputValues }) => {
 
     const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + (i * step));
 
-    let hoursRange = range(startTimeMilliseconds, endTimeMilliseconds, 120000); // 120000 -> este lo puede cambiar por lo quiera en milisegundos
+    let hoursRange = range(startTimeMilliseconds, endTimeMilliseconds, 60000); // 120000 -> este lo puede cambiar por lo quiera en milisegundos
 
     let foundTimeInRange = hoursRange.find(timeAlert => timeAlert === timeNowMilliseconds);
 
