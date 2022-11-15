@@ -81,8 +81,6 @@ function App() {
       toast.info('¡¡¡Es hora de descansar tus ojos!!! Recuerda mirar a 6 metros durante 20 segundos', {
         position: toast.POSITION.TOP_RIGHT
       });
-    } else {
-      return false
     }
     console.log('found', foundTimeInRange)
   }
