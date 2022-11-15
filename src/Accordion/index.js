@@ -7,15 +7,17 @@ const Accordion = ({
     title,
     paragraph,
     list,
-    children
+    children,
+    id
 }) => {
     const [clickAccordion, setClickAccordion] = useState(false);
 
     const togleAccordion = () => {
         setClickAccordion(!clickAccordion);
     }
+    
 
-
+    
     return (
         <>
             <div className={clickAccordion ? 'header-accordion-active' : 'header-accordion-inactive'}>
@@ -32,7 +34,6 @@ const Accordion = ({
                         :
                         <IconChevronUp
                             width='20px'
-                            height='20px'
                         />
                     }
                 </div>
