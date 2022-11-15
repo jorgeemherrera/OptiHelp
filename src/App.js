@@ -1,9 +1,9 @@
 import './App.scss';
-import { Accordion } from './Accordion';
+import { Accordion } from './components/Accordion';
 import { IconBellRinging } from '@tabler/icons';
 import { IconLink } from '@tabler/icons';
-import { Navbar } from './Navbar';
-import { Tab } from './Tabs';
+import { Navbar } from './components/Navbar';
+import { Tab } from './components/Tabs';
 import { useState } from 'react';
 import Alert from './components/Alert';
 import astigmatismo from './assets/images/astigmatismo.png'
@@ -82,6 +82,7 @@ function App() {
               <Tab
                 titleTab='Usar prescripción óptica'
                 paragraphTab='No olvides asistir al optómetra una vez al año para actualizar tu fórmula de gafas.'
+                index="0"
               >
                 <img src={glassesFirst} alt='girl-with-glasses' />
                 <p>Para mayor información…
@@ -99,6 +100,7 @@ function App() {
                 delgada película de varias capas que se aplica sobre el mismo para reducir los reflejos y eliminar el
                 deslumbramiento. Esto te ayudará a tener una visión de mayor calidad. (AR convencional)
                 '
+                index="1"
               >
                 <br />
                 <p>
