@@ -4,17 +4,18 @@ import './Tabs.scss'
 const Tab = ({
     children,
     titleTab,
-    paragraphTab,
+    paragraphTab
 }) => {
 
-    const [clickTab, setClickTab] = useState(false)
+    const [clickTab, setClickTab] = useState(false);
 
     const toogleTab = () => {
         setClickTab(!clickTab)
     }
 
+
     return (
-        <div className="parent-tab">
+       <div className="parent-tab">
             <div className={!clickTab ? 'button-tab' : 'inactive'}>
                 <button onClick={toogleTab}><h3>{titleTab}</h3></button>
             </div>
@@ -29,7 +30,7 @@ const Tab = ({
                     null
                 }
             </section>
-        </div>
+        </div> 
     );
 
 }
