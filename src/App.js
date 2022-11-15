@@ -1,9 +1,9 @@
 import './App.scss';
-import { Accordion } from './Accordion';
+import { Accordion } from './components/Accordion';
 import { IconBellRinging } from '@tabler/icons';
 import { IconLink } from '@tabler/icons';
-import { Navbar } from './Navbar';
-import { Tab } from './Tabs';
+import { Navbar } from './components/Navbar';
+import { Tab } from './components/Tabs';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
 import astigmatismo from './assets/images/astigmatismo.png'
@@ -25,11 +25,6 @@ import parpadeo from './assets/images/parpadeo.png'
 import presbicia from './assets/images/presbicia.png'
 import twentyMinutes from './assets/images/20M.png'
 
-//librería toast
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-//toast manual
-
 
 function App() {
   const [modalState, setModalState] = useState(false);
@@ -48,10 +43,7 @@ function App() {
   let inputsGetItem = JSON.parse(localStorage.getItem('formTimeValues'));
 
   const onHandleClickAlert = () => {
-    // setModalState(!modalState);
-    toast.info('¡¡¡Es hora de descansar tus ojos!!! Recuerda mirar a 6 metros durante 20 segundos', {
-      position: toast.POSITION.TOP_RIGHT
-    });
+    setModalState(!modalState);
   };
 
 
@@ -59,14 +51,6 @@ function App() {
     <div className='App'>
       <Navbar />
       <button onClick={onHandleClickAlert}><IconBellRinging />Crear Alerta</button>
-
-
-      <ToastContainer
-        className="toast-container"
-      />
-
-
-
       <div className='body-accordions'>
         <Accordion
           title="¿QUÉ ES HIGIENE VISUAL?"
@@ -102,6 +86,7 @@ function App() {
               <Tab
                 titleTab='Usar prescripción óptica'
                 paragraphTab='No olvides asistir al optómetra una vez al año para actualizar tu fórmula de gafas.'
+                index="0"
               >
                 <img src={glassesFirst} alt='girl-with-glasses' />
                 <p>Para mayor información…
@@ -119,6 +104,7 @@ function App() {
                 delgada película de varias capas que se aplica sobre el mismo para reducir los reflejos y eliminar el
                 deslumbramiento. Esto te ayudará a tener una visión de mayor calidad. (AR convencional)
                 '
+                index="1"
               >
                 <br />
                 <p>

@@ -53,11 +53,9 @@ const Alert = ({ inputValues }) => {
 
     if (foundTimeInRange) {
         //TODO: crear componente custom para un toaster o alerta // investigar en google
-        //<Toast message ="¡¡Es hora de descansar tus ojos!!! Recuerda mirar a 6 metros durante 20 segundos"/>
-        // alert('¡¡¡Es hora de descansar tus ojos!!! Recuerda mirar a 6 metros durante 20 segundos')
-        // toast.info('¡¡¡Es hora de descansar tus ojos!!! Recuerda mirar a 6 metros durante 20 segundos', {
-        //     position: toast.POSITION.TOP_RIGHT
-        // });
+        toast.info('¡¡¡Es hora de descansar tus ojos!!! Recuerda mirar a 6 metros durante 20 segundos', {
+            position: toast.POSITION.TOP_RIGHT
+        });
     }
 
     console.log('found', foundTimeInRange)
@@ -71,9 +69,9 @@ const Alert = ({ inputValues }) => {
                 <input type="time" name="endTime" id="endTime" value={endValue} onChange={e => onChangeInputTime(e.target.value, 'endTime')} />
                 <button className='buttonAlert' >Crear Alerta</button>
             </div>
-                <ToastContainer 
-                    className="toast-container"
-                />
+            <ToastContainer
+                className="toast-container"
+            />
         </>
     )
 }

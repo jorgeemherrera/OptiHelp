@@ -22,3 +22,19 @@
     }
 }
 
+.toast-container,
+.container--top-right {
+  top: 0;
+  background-color: rgba(229,237,237,0.76);
+  height: 100%;
+  transform: translateX(0);
+
+  .Toastify__toast {
+    color: #707c83;
+    top: 212px;
+    margin: 0 17PX;
+    padding: 5px;
+  }
+
+}
+

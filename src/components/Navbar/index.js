@@ -1,6 +1,6 @@
 import React from "react";
 import './navbar.scss'
-import logo from '../assets/images/logo-optihelp.png'
+import logo from '../../assets/images/logo-optihelp.png'
 
 const Navbar = () => {
   return (
