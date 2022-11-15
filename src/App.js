@@ -4,7 +4,7 @@ import { IconBellRinging } from '@tabler/icons';
 import { IconLink } from '@tabler/icons';
 import { Navbar } from './components/Navbar';
 import { Tab } from './components/Tabs';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Alert from './components/Alert';
 import astigmatismo from './assets/images/astigmatismo.png'
 import calefactor from './assets/images/calefactor.png'
@@ -25,8 +25,10 @@ import parpadeo from './assets/images/parpadeo.png'
 import presbicia from './assets/images/presbicia.png'
 import twentyMinutes from './assets/images/20M.png'
 
+
 function App() {
   const [modalState, setModalState] = useState(false);
+  const idsAccordions = [1, 2, 3, 4, 5, 6]
 
   const listAffectations = [
     "Cansancio visual",
@@ -44,6 +46,7 @@ function App() {
     setModalState(!modalState);
   };
 
+
   return (
     <div className='App'>
       <Navbar />
@@ -57,6 +60,7 @@ function App() {
 
           ¿Quieres saber más? Mira la siguiente información
           "
+          id={idsAccordions[0]}
         />
         <Accordion
           title="AFECTACIONES OCULARES"
@@ -67,15 +71,15 @@ function App() {
           "
           list={listAffectations}
           urlImage="../src/assets/images/downward-arrow.png"
-          id='2'
+          id={idsAccordions[1]}
         />
         <Accordion
-          id='3'
           title="TIPS DE HIGIENE VISUAL"
           paragraph="
             Si queremos disminuir o evitar alguno o varios síntomas mencionados anteriormente,
             debemos aprender a cuidar nuestra salud ocular
           "
+          id={idsAccordions[2]}
         >
           <div className='poitns-accordion'>
             <section className='section first-point'>
@@ -257,8 +261,8 @@ function App() {
         </Accordion>
 
         <Accordion
-          id='4'
           title='STICKER DESCARGABLE'
+          id={idsAccordions[3]}
         >
           <section className='poitns-accordion'>
             <a href={imageDownloadable} download>
@@ -272,16 +276,16 @@ function App() {
         </Accordion>
 
         <Accordion
-          id='5'
           title='ALARMAS'
           paragraph='
           Coloca en práctica la regla 20/20/20.
           Aquí puedes añadir tu horario de trabajo para que cada 20 minutos la alarma te recuerde que debes descansar durante 20 segundos de la pantalla y mirar el sitio mas lejano que haya a tu alrededor
           '
+          id={idsAccordions[4]}
         />
         <Accordion
-          id='6'
           title='TEMAS DE INTERÉS'
+          id={idsAccordions[5]}
         >
           <section className='poitns-accordion'>
 
@@ -333,11 +337,12 @@ function App() {
 
       </div>
       <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
-        <Alert inputValues={inputsGetItem}/>
+        <Alert inputValues={inputsGetItem} />
       </Modal>
     </div>
   );
 }
+
 
 
 export default App;
