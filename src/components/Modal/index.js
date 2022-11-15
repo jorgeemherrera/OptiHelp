@@ -13,7 +13,7 @@ const Modal = ({ children, title, stateModal, changeModalState }) => {
                             <div className='modal-header'>
                                 <h3>{title}</h3>
                             </div>
-                            <IconPlaystationX onClick={() => changeModalState(false)}/>
+                            <IconPlaystationX id='icon-play-x' onClick={() => changeModalState(false)} />
                             {children}
                         </div>
                     </section>

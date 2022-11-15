@@ -3,7 +3,7 @@ import { Accordion } from './components/Accordion';
 import { IconBellRinging } from '@tabler/icons';
 import { IconLink } from '@tabler/icons';
 import { Navbar } from './components/Navbar';
-import { Tab } from './components/Tabs';
+import { Tab } from './components/Tabs'
 import React, { useState } from 'react';
 import Alert from './components/Alert';
 import astigmatismo from './assets/images/astigmatismo.png'
@@ -36,7 +36,6 @@ function App() {
     "Dolor de cabeza",
     "Ojo rojo, picor o molestias oculares",
     "Visión borrosa",
-    "Alteraciones en usuarios de lentes de contacto",
     "Lagrimeo"
   ];
 
@@ -65,7 +64,7 @@ function App() {
         <Accordion
           title="AFECTACIONES OCULARES"
           paragraph="
-          El sobre abuso y abuso de los dispositivos inteligentes hace que nuestros ojos sufran
+          El sobre uso y abuso de los dispositivos inteligentes hace que nuestros ojos sufran
           efectos secundarios que pueden incluso afectar nuestra calidad de vida, algunos de ellos
           son:
           "
@@ -125,7 +124,7 @@ function App() {
             <section className='section secopnd-point'>
               <Tab
                 titleTab='Mantener buena iluminación'
-                paragraphTab='Evita trabajar en lugares con baja iluminación para evitar fatiga visual.Evita trabajar en lugares con baja iluminación para evitar fatiga visual.'
+                paragraphTab='Evita trabajar en lugares con baja iluminación para evitar fatiga visual.'
               >
                 <img src={Lantern} alt='' className='lantern-image' />
                 <p>Trabaja en ambientes con iluminación artificial y natural, evitando el cansancio ocular</p>
@@ -136,11 +135,23 @@ function App() {
                   </a>
                 </p>
                 <p>
-                  Evita trabajar en lugares con baja iluminación para evitar fatiga visual.Esta app te muestra la  cantidad de iluminación en el lugar donde estás:
+                  Esta
+                  <a style={{ marginRight:"7px" }} rel="noopener noreferrer" target="_blank" href='https://play.google.com/store/apps/details?id=crunchybytebox.lightmeter'>
+                    <IconLink />
+                    App
+                  </a>
+                  te muestra la cantidad de iluminación en el lugar donde estás:
+                  <br />
+                  <p>Lo que te ayudará a saber si cuentas con la iluminación adecuada en tu lugar de trabajo.</p>
+                </p>
+                <p>
+                  Si ingresas al siguiente link, te va a indicar las diferentes longitudes de onda que generan las pantallas de diferentes dispositivos:
                   <a rel="noopener noreferrer" target="_blank" href='https://fluxometer.com/rainbow/#!id=iPad%20Pro/2300K-iPad%20Pro'>
                     <IconLink />
                     Fluxometer
-                  </a> <br />
+                  </a>
+                  <br />
+                  <br />
                   Lo que te ayudará a saber si cuentas con la iluminación adecuada en tu lugar de trabajo.
                 </p>
               </Tab>
