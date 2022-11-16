@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/optihelp/static/css/main.489281f7.css",
+    "main.css": "/optihelp/static/css/main.5bd457a6.css",
     "main.js": "/optihelp/static/js/main.5b9b2918.js",
     "static/js/787.64849957.chunk.js": "/optihelp/static/js/787.64849957.chunk.js",
     "static/media/food.png": "/optihelp/static/media/food.eb72a765f6ae83588ed4.png",
@@ -22,12 +22,12 @@
     "static/media/astigmatismo.png": "/optihelp/static/media/astigmatismo.1da442b4f8cdba70d6ed.png",
     "static/media/miopia.png": "/optihelp/static/media/miopia.acb7a41e213e99c7c152.png",
     "index.html": "/optihelp/index.html",
-    "main.489281f7.css.map": "/optihelp/static/css/main.489281f7.css.map",
+    "main.5bd457a6.css.map": "/optihelp/static/css/main.5bd457a6.css.map",
     "main.5b9b2918.js.map": "/optihelp/static/js/main.5b9b2918.js.map",
     "787.64849957.chunk.js.map": "/optihelp/static/js/787.64849957.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.489281f7.css",
+    "static/css/main.5bd457a6.css",
     "static/js/main.5b9b2918.js"
   ]
 }
