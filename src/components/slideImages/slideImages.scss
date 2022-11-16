@@ -1,22 +1,26 @@
 .images {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-    img {
-        width: 100%;
-        max-width: 258px;
-    }
+  img {
+    width: 100%;
+    max-width: 258px;
+  }
 
-    p {
-        margin-top: 0;
-    }
+  p {
+    margin-top: 0;
+    text-align: center;
+    font-weight: 700;
+    background: #e3e3e3;
+    border-radius: 5px;
+  }
 
-    .Icon-caret-left {
-        left: 33px;
-    }
+  .Icon-caret-left {
+    left: 33px;
+  }
 
-    .Icon-caret-right {
-        right: 33px;
-    }
+  .Icon-caret-right {
+    right: 33px;
+  }
 }

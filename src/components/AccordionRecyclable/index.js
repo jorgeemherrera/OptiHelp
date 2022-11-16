@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { IconChevronDown, IconChevronUp } from '@tabler/icons';
 import PropTypes from 'prop-types'
-import './accordion.scss'
+import './accordionRecyclable.scss'
 
-const Accordion = ({
+const AccordionRecyclable = ({
     title,
     paragraph,
     list,
@@ -15,9 +15,9 @@ const Accordion = ({
     const togleAccordion = () => {
         setClickAccordion(!clickAccordion);
     }
-    
 
-    
+
+
     return (
         <>
             <div className={clickAccordion ? 'header-accordion-active' : 'header-accordion-inactive'}>
@@ -59,9 +59,9 @@ const Accordion = ({
     );
 }
 
-export { Accordion }
+export { AccordionRecyclable }
 
-Accordion.propTypes = {
+AccordionRecyclable.propTypes = {
     title: PropTypes.string,
     paragraph: PropTypes.string
 }
