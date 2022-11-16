@@ -16,7 +16,6 @@ import distanciaMonitor from '../../assets/images/postura.png'
 import food from '../../assets/images/food.png'
 import glassesFirst from '../../assets/images/glassesFirstPoint.png'
 import Lantern from '../../assets/images/lampara.png'
-
 //icons and css
 import { IconLink } from '@tabler/icons';
 import './Tabs.scss'

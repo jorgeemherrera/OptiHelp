@@ -1,0 +1,54 @@
+
+.accordian-item {
+    list-style-type: none;
+
+    .item-select-default {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .default-title {
+            color: #000;
+            font-size: 16px;
+            font-weight: 400;
+            margin-right: 0.5rem;
+        }
+
+        .default-caret {
+            color: blue;
+            cursor: pointer;
+        }
+    }
+
+    .item-select-lg {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        .lg-title {
+            color: #000;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .lg-caret {
+            background: blue;
+            border-radius: 200px;
+            display: inline-flex;
+            height: 23px;
+            margin-left: 0.5rem;
+            width: 23px;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                color: blue;
+
+                polyline {
+                    stroke-width: 30;
+                }
+            }
+        }
+    }
+}
