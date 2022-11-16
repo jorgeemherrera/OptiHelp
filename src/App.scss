@@ -60,32 +60,6 @@ a {
   }
 }
 
-.body-accordions {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 60px 0;
-}
-
-.poitns-accordion {
-  .fourth-point {
-    img {
-      border-radius: 10px;
-      height: auto !important;
-      object-fit: initial;
-      width: 300px;
-    }
-  }
-
-  // .first-point{
-  img {
-    border-radius: 10px;
-    height: auto;
-    width: 300px;
-  }
-}
-
 button {
   &.create-alert,
   &.button-alert {
