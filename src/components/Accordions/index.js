@@ -19,7 +19,7 @@ const Accordions = () => {
         <div className='body-accordions'>
             <AccordionRecyclable
                 title="¿QUÉ ES HIGIENE VISUAL?"
-                paragraph="La higiene visual se denomina como un conjunto de prácticas diarias enfoncadas en cuidar
+                paragraph="La higiene visual se denomina como un conjunto de prácticas diarias enfocadas en cuidar
                            la salud visual y ocular cuando usamos computadores, celulares, tablets, entre otros.
                            ¿Quieres saber más? Mira la siguiente información"
                 id={'0'}

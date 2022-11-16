@@ -37,14 +37,12 @@ const TabsTipsHigiene = () => {
                 <TabsRecyclable
                     titleTab='Las gafas deben contar con antirreflejo'
                     paragraphTab='
-                Las gafas deben contar con antirreflejos…
                 El tratamiento antirreflejo consiste en un revestimiento que se hace al lente, por medio de una
                 delgada película de varias capas que se aplica sobre el mismo para reducir los reflejos y eliminar el
                 deslumbramiento. Esto te ayudará a tener una visión de mayor calidad. (AR convencional)
                 '
                     index="1"
                 >
-                    <br />
                     <p>
                         Además, existen AR que protegen los ojos de la luz azul de las pantallas reduciendo la
                         cantidad de luz que reciben los ojos.
@@ -56,10 +54,11 @@ const TabsTipsHigiene = () => {
             <section className='section second-point'>
                 <TabsRecyclable
                     titleTab='Mantener buena iluminación'
-                    paragraphTab='Evita trabajar en lugares con baja iluminación para evitar fatiga visual.'
+                    paragraphTab='Evita trabajar en lugares con baja iluminación para evitar fatiga visual 
+                    y otras alteraciones producidas por la radiación azul.
+                    ¡Esto se logra prendiendo las luces…!'
                 >
                     <img src={Lantern} alt='' className='lantern-image' />
-                    <p>Trabaja en ambientes con iluminación artificial y natural, evitando el cansancio ocular</p>
                     <DownloadPdf />
                     <p>
                         Esta
@@ -77,16 +76,13 @@ const TabsTipsHigiene = () => {
                             <IconLink />
                             Fluxometer
                         </a>
-                        <br />
-                        <br />
-                        Lo que te ayudará a saber si cuentas con la iluminación adecuada en tu lugar de trabajo.
                     </p>
                 </TabsRecyclable>
             </section>
 
             <section className='section third-point'>
                 <TabsRecyclable
-                    titleTab='Distancia de Harmmon'
+                    titleTab='Distancia de Harmon'
                     paragraphTab='Consiste en distanciar la pantalla en el espacio existente entre el codo y la muñeca.'
                 >
                     <img src={codoMovil} alt='' />
@@ -118,7 +114,6 @@ const TabsTipsHigiene = () => {
                     paragraphTab='La temperatura en el lugar de trabajo debe estar entre 17° y 27°. Es necesario evitar ambientes con temperaturas elevadas y exposición directa al aire acondicionado ya que desencadenan cansancio ocular y un aumento en la evaporación lagrimal.'
                 >
                     <img src={calefactor} alt='' />
-                    <h3>No te expongas a temperaturas muy bajas, ni muy altas para no generar cansancio ocular e inestabilidad lagrimal</h3>
                     <DownloadPdf />
                 </TabsRecyclable>
             </section>
@@ -131,7 +126,6 @@ const TabsTipsHigiene = () => {
                 visual.'
                 >
                     <img src={twentyMinutes} alt='' />
-                    <p>Balancea tú dieta con alimentos ricos en Omega3</p>
                     <DownloadPdf />
                 </TabsRecyclable>
             </section>
@@ -170,8 +164,10 @@ const TabsTipsHigiene = () => {
                         </ul>
                     </p>
                     <img src={food} alt='' />
-                    <h3>Balancea tú dieta con alimentos ricos en Omega3</h3>
-                    <DownloadPdf />
+                    <p>Cuidarnos con la alimentación nos proporciona una salud ocular efectiva a largo plazo</p>
+                    <p>Para mayor información… </p>
+                    <a href="https://www.aao.org/salud-ocular/consejos/dieta-nutricion" rel="noopener noreferrer" target='_blank'> <IconLink/> Dieta y nutrición </a><br/>
+                    <a href="https://nutricion.org/wp-content/uploads/2019/04/Dieta-Mediterranea-Avances-2014.pdf " rel="noopener noreferrer" target='_blank'> <IconLink/> Dieta mediterranea avances </a>
                 </TabsRecyclable>
             </section>
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {useNavigate} from 'react-router-dom';
 
 //components
 import { Navbar } from './components/Navbar';
@@ -19,6 +20,7 @@ function App() {
   const [startValue, setStartValue] = useState();
 
   let inputsGetItem = JSON.parse(localStorage.getItem('formTimeValues'));
+  const navigate = useNavigate();
 
   useEffect(() => {
     // App como prop
@@ -31,7 +33,11 @@ function App() {
   const onHandleClickAlert = () => {
     setModalState(!modalState);
   };
-
+  
+  const CloseAlertButton = () => {
+    navigate(0)
+    setModalState(false);
+  }
   const convertTimeToMilliseconds = (value) => {
     return (+value[0] * (60000 * 60)) + (+value[1] * 60000)
   }
@@ -59,11 +65,12 @@ function App() {
     console.log('foundTimeInRange', foundTimeInRange)
   }
 
+
   useEffect(() => {
     const interval = setInterval(() => {
       foundTimeToRange();
       console.log('foundTimeToRange', foundTimeToRange());
-    }, 61000);
+    }, 62000);
     return () => clearInterval(interval);
   });
 
@@ -73,7 +80,7 @@ function App() {
       <button className='create-alert' onClick={onHandleClickAlert}><IconBellRinging />Crear Alerta</button>
       <Accordions />
       <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
-        <Alert inputValues={inputsGetItem} closeModal={() => setModalState(false)} />
+        <Alert inputValues={inputsGetItem} closeModal={CloseAlertButton} />
       </Modal>
       <ToastContainer
         className="toast-container"
