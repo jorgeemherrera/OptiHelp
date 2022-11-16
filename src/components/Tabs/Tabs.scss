@@ -1,44 +1,16 @@
-@import '../../assets/scss/variables';
 
-.inactive{
-    display: none;
-}
-
-.parent-tab {
-    .button-tab {
-        button {
-            background-color: transparent;
-            border: 1px solid #37b7ff;
-            border-radius: 15px;
-            font-size: 18px;
-            font-family: "Russo One", sans-serif;
-            padding: 0 10px;
-            height: 100%;
-            margin: 20px 0 20px 0;
-            width: 100%;
-            cursor: pointer;
-            max-height: 82px;
-        }
+.poitns-accordion {
+    .fourth-point {
+      img {
+        border-radius: 10px;
+        height: auto !important;
+        object-fit: initial;
+        width: 300px;
+      }
     }
-    .section-active-tab{
-        padding: 10px;
-        border: 1px solid #37b7ff;
-        border-radius: 15px;
-        margin: 17px 0;
-        button{
-            background-color: transparent;
-            border: none;
-            border-radius: 15px;
-            font-size: 18px;
-            font-family: "Russo One", sans-serif;
-            padding: 0 10px;
-            height: 100%;
-            width: 100%;
-            cursor: pointer;
-            max-height: 82px;
-        }
-        img{
-            margin-left: 0;
-        }
+    img {
+      border-radius: 10px;
+      height: auto;
+      width: 300px;
     }
-}
+  }
