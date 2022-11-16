@@ -15,11 +15,11 @@ import calefactor from './assets/images/calefactor.png'
 import codoMovil from './assets/images/harmon.png'
 import distanciaMonitor from './assets/images/postura.png'
 import food from './assets/images/food.png'
-import glassArBlue from './assets/images/glassArBlue.png'
-import glassArCon from './assets/images/glassArCon.png'
+// import glassArBlue from './assets/images/glassArBlue.png'
+// import glassArCon from './assets/images/glassArCon.png'
 import glassesFirst from './assets/images/glassesFirstPoint.png'
-import glassOutAr from './assets/images/glassOutAr.png'
-import glassUv from './assets/images/glassUv.png'
+// import glassOutAr from './assets/images/glassOutAr.png'
+// import glassUv from './assets/images/glassUv.png'
 import hipermetropia from './assets/images/hipertrofia.png'
 import imageDownloadable from './assets/images/downloadable.png'
 import Lantern from './assets/images/lampara.png'
@@ -28,12 +28,14 @@ import Modal from './components/Modal';
 import parpadeo from './assets/images/parpadeo.png'
 import presbicia from './assets/images/presbicia.png'
 import twentyMinutes from './assets/images/20M.png'
+import { ImageParentSlide } from './components/imagesParentSlide';
 
 function App() {
   const [endValue, setEndValue] = useState();
   const [modalState, setModalState] = useState(false);
   const [startValue, setStartValue] = useState();
   const idsAccordions = [1, 2, 3, 4, 5, 6]
+
 
   const listAffectations = [
     "Cansancio visual",
@@ -68,7 +70,7 @@ function App() {
   let endTimeMilliseconds = (convertTimeToMilliseconds(String(endValue).split(":")));
   let timeNowMilliseconds = (convertTimeToMilliseconds(String(timeNow).split(":")));
 
-  console.log('startTimeMilliseconds, endTimeMilliseconds, timeNowMilliseconds', startTimeMilliseconds, endTimeMilliseconds, timeNowMilliseconds);
+  // console.log('startTimeMilliseconds, endTimeMilliseconds, timeNowMilliseconds', startTimeMilliseconds, endTimeMilliseconds, timeNowMilliseconds);
 
   const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + (i * step));
 
@@ -76,19 +78,23 @@ function App() {
 
   const foundTimeToRange = () => {
     let foundTimeInRange = hoursRange.find(timeAlert => timeAlert === timeNowMilliseconds);
-  
+
     if (foundTimeInRange) {
       toast.info('¡¡¡Es hora de descansar tus ojos!!! Recuerda mirar a 6 metros durante 20 segundos', {
         position: toast.POSITION.TOP_RIGHT
       });
     }
-    console.log('found', foundTimeInRange)
+    // console.log('found', foundTimeInRange)
   }
+
+
+
+
 
   useEffect(() => {
     const interval = setInterval(() => {
       foundTimeToRange();
-      console.log('This will run every minute', foundTimeToRange);
+      // console.log('This will run every minute', foundTimeToRange);
     }, 61000);
     return () => clearInterval(interval);
   });
@@ -136,13 +142,13 @@ function App() {
               >
                 <img src={glassesFirst} alt='girl-with-glasses' />
                 <p>Para mayor información…
-                  <a  href='/' download="./assets/pdf/Optihelp-mayor-informacion.pptx" >
+                  <a href='/' download="./assets/pdf/Optihelp-mayor-informacion.pptx" >
                     <IconLink />
                     PPTX
                   </a>
                 </p>
               </Tab>
-              <Tab
+              {/* <Tab
                 titleTab='Las gafas deben contar con antirreflejo'
                 paragraphTab='
                 Las gafas deben contar con antirreflejos…
@@ -171,6 +177,23 @@ function App() {
                     PPTX
                   </a>
                 </p>
+              </Tab> */}
+              <Tab
+                titleTab='Las gafas deben contar con antirreflejo'
+                paragraphTab='
+                Las gafas deben contar con antirreflejos…
+                El tratamiento antirreflejo consiste en un revestimiento que se hace al lente, por medio de una
+                delgada película de varias capas que se aplica sobre el mismo para reducir los reflejos y eliminar el
+                deslumbramiento. Esto te ayudará a tener una visión de mayor calidad. (AR convencional)
+                '
+                index="1"
+              >
+                <br />
+                <p>
+                  Además, existen AR que protegen los ojos de la luz azul de las pantallas reduciendo la
+                  cantidad de luz que reciben los ojos.
+                </p>
+                <ImageParentSlide />
               </Tab>
             </section>
 

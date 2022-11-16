@@ -1,0 +1,22 @@
+.images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+        width: 100%;
+        max-width: 258px;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    .Icon-caret-left {
+        left: 33px;
+    }
+
+    .Icon-caret-right {
+        right: 33px;
+    }
+}
