@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { AccordionRecyclable } from "../AccordionRecyclable";
 import { TabsTemasDeInteres, TabsTipsHigiene } from "../Tabs";
 import imageDownloadable from '../../assets/images/downloadable.png'
@@ -5,6 +6,13 @@ import './Accordions.scss'
 
 
 const Accordions = () => {
+    const [accordionFirst, setAccordionFirst] = useState(false);
+    const [accordionSecond, setAccordionSecond] = useState(false);
+    const [accordionThird, setAccordionThird] = useState(false);
+    const [accordionFourth, setAccordionFourth] = useState(true);
+    const [accordionFive, setAccordionFive] = useState(false);
+    const [accordionSix, setAccordionSix] = useState(true);
+
     const listAffectations = [
         "Cansancio visual",
         "Sequedad ocular",
@@ -14,16 +22,28 @@ const Accordions = () => {
         "Lagrimeo"
     ];
 
+    const clickFirst = () => {
+        setAccordionFirst(true)
+        setAccordionSecond(false)
+        setAccordionThird(false)
+        setAccordionFourth(false)
+        setAccordionFive(false)
+        setAccordionSix(false)
+    }
+
 
     return (
         <div className='body-accordions'>
-            <AccordionRecyclable
-                title="¿QUÉ ES HIGIENE VISUAL?"
-                paragraph="La higiene visual se denomina como un conjunto de prácticas diarias enfoncadas en cuidar
+            <div onClick={clickFirst}>
+                <AccordionRecyclable
+                    title="¿QUÉ ES HIGIENE VISUAL?"
+                    paragraph="La higiene visual se denomina como un conjunto de prácticas diarias enfoncadas en cuidar
                            la salud visual y ocular cuando usamos computadores, celulares, tablets, entre otros.
                            ¿Quieres saber más? Mira la siguiente información"
-                id={'0'}
-            />
+                    id={'0'}
+
+                />
+            </div>
             <AccordionRecyclable
                 title="AFECTACIONES OCULARES"
                 paragraph=" sobre uso y abuso de los dispositivos inteligentes hace que nuestros ojos sufran
