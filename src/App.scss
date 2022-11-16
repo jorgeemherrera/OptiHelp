@@ -87,9 +87,8 @@ a {
 }
 
 button {
-  &.create-alert {
-    align-content: space-around;
-    align-items: center;
+  &.create-alert,
+  &.button-alert {
     background-color: $blue;
     border-radius: 1.1rem;
     border: none;
@@ -98,12 +97,20 @@ button {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    justify-content: space-between;
     margin-top: 2rem;
     padding: 0.7rem 1rem;
     svg {
       color: $purple-light;
       padding-right: 0.5rem;
     }
+  }
+  &.button-alert {
+    align-items: center;
+    justify-content: center;
+  }
+  &.create-alert {
+    align-content: space-around;
+    align-items: center;
+    justify-content: space-between;
   }
 }

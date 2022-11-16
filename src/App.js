@@ -84,7 +84,7 @@ function App() {
         position: toast.POSITION.TOP_RIGHT
       });
     }
-    // console.log('found', foundTimeInRange)
+    console.log('foundTimeInRange', foundTimeInRange)
   }
 
 
@@ -94,7 +94,7 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       foundTimeToRange();
-      // console.log('This will run every minute', foundTimeToRange);
+      console.log('foundTimeToRange', foundTimeToRange());
     }, 61000);
     return () => clearInterval(interval);
   });
@@ -431,7 +431,7 @@ function App() {
 
       </div>
       <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
-        <Alert inputValues={inputsGetItem} />
+        <Alert inputValues={inputsGetItem} closeModal={() => setModalState(false)}/>
       </Modal>
       <ToastContainer
         className="toast-container"
