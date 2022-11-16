@@ -11,10 +11,10 @@ import glassUv from '../../assets/images/glassUv.png';
 const SlideImages = ({ images }) => {
     // data images
     const imagesData = [
-        { name: 'Glass Ar Blue', image: glassArBlue, },
-        { name: 'Glass ArCon', image: glassArCon, },
-        { name: 'Glass Without Ar', image: glassOutAr, },
-        { name: 'Glass UV', image: glassUv, },
+        { name: 'Lente con AR de protección a la luz azul', image: glassArBlue, },
+        { name: 'Lente con AR convencional', image: glassArCon, },
+        { name: 'Lente sin ningún tipo de AR', image: glassOutAr, },
+        { name: 'Lente que se oscurece en el sol y permite protección de los rayos UV', image: glassUv, },
     ]
 
     const [current, setCurrent] = useState(0);
