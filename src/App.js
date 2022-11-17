@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 //components
 import { Navbar } from './components/Navbar';
@@ -8,33 +8,40 @@ import Alert from './components/Alert';
 import Modal from './components/Modal';
 
 //icons and scss
-import { IconBellRinging } from '@tabler/icons';
+import { IconBellRinging, IconPlaystationX } from '@tabler/icons';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
 import { Accordions } from './components/Accordions';
 import { Tabs, Tab, TabPanel } from './components/TabsJorge/Tabs';
+
 
 function App() {
   const [endValue, setEndValue] = useState();
   const [modalState, setModalState] = useState(false);
   const [startValue, setStartValue] = useState();
   const [activeTab, setActiveTab] = useState(1);
-
+  const [successAlert, setSuccessAlert] = useState(false);
 
   let inputsGetItem = JSON.parse(localStorage.getItem('formTimeValues'));
   const navigate = useNavigate();
 
   useEffect(() => {
-    // App como prop
     if (inputsGetItem) {
       setStartValue(inputsGetItem.startTime);
       setEndValue(inputsGetItem.endTime)
     }
   }, [inputsGetItem]);
 
+  const onHandleClickAlert = () => {
+    setModalState(!modalState);
+  };
+
   const CloseAlertButton = () => {
-    navigate(0)
+    setSuccessAlert(true);
     setModalState(false);
+    setTimeout(() => {
+      navigate(0);
+    }, 3500);
   }
 
   const onHandleClickAlert = () => {
@@ -126,6 +133,7 @@ function App() {
       <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
         <Alert inputValues={inputsGetItem} closeModal={CloseAlertButton} />
       </Modal>
+      <div className={successAlert ? 'alert-success' : 'alert-none'}><p>¡Alerta creada satisfactoriamente!</p><IconPlaystationX id='alert' onClick={() => setSuccessAlert(false)} /></div>
       <ToastContainer
         className="toast-container"
       />
