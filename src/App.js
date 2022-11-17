@@ -12,13 +12,14 @@ import { IconBellRinging, IconPlaystationX } from '@tabler/icons';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
 import { Accordions } from './components/Accordions';
+import { Tabs, Tab, TabPanel } from './components/TabsJorge/Tabs';
 
 function App() {
   const [endValue, setEndValue] = useState();
   const [modalState, setModalState] = useState(false);
   const [startValue, setStartValue] = useState();
   const [successAlert, setSuccessAlert] = useState(false);
-
+  const [activeTab, setActiveTab] = useState(1);
   let inputsGetItem = JSON.parse(localStorage.getItem('formTimeValues'));
   const navigate = useNavigate();
 
@@ -29,10 +30,6 @@ function App() {
     }
   }, [inputsGetItem]);
 
-  const onHandleClickAlert = () => {
-    setModalState(!modalState);
-  };
-
   const CloseAlertButton = () => {
     setSuccessAlert(true);
     setModalState(false);
@@ -40,6 +37,11 @@ function App() {
       navigate(0);
     }, 3500);
   }
+
+  const onHandleClickAlert = () => {
+    setModalState(!modalState);
+  };
+  
   const convertTimeToMilliseconds = (value) => {
     return (+value[0] * (60000 * 60)) + (+value[1] * 60000)
   }
@@ -67,6 +69,11 @@ function App() {
     console.log('foundTimeInRange', foundTimeInRange)
   }
 
+  const handleChange = (e, value) => {
+    setActiveTab(value);
+  };
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       foundTimeToRange();
@@ -75,11 +82,48 @@ function App() {
     return () => clearInterval(interval);
   });
 
+  const getDataTraceabilityTab = () => {
+    return <Tab id='product-detail-page-tab-data-traceability' key={2} label="Tab 2" value={2} />
+  }
+
+  const getDataDefinitionTab = () => {
+    return <Tab id='product-detail-page-tab-definitions' key={1} label="Tab 1" value={1} />
+  }
+
+  const getProductVersionTab = () => {
+    return <Tab id='product-detail-page-tab-product-version' key={3} label="Tab 3" value={3} />;
+
+  }
+
   return (
     <div className='App'>
       <Navbar />
       <button className='create-alert' onClick={onHandleClickAlert}><IconBellRinging />Crear Alerta</button>
       <Accordions />
+      {/* ------------------ TABS ------------------- */}
+      {/* <section className='tab'>
+        <div className='tab--container'>
+          <Tabs id='product-detail-page-tabs' selectedTab={activeTab} onChange={handleChange}>
+            {getDataDefinitionTab()}
+            {getDataTraceabilityTab()}
+            {getProductVersionTab()}
+          </Tabs>
+        </div>
+        <div className='tab--panel-container tab--panel-container'>
+          <TabPanel value={activeTab} selectedIndex={1}>
+            <p>lorem</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </TabPanel>
+          <TabPanel value={activeTab} selectedIndex={2}>
+            <p>tab 2</p>
+          </TabPanel>
+          <TabPanel value={activeTab} selectedIndex={3}>
+            <p>tab 3</p>
+          </TabPanel>
+        </div>
+      </section> */}
+      {/* ------------------ TABS ------------------- */}
+
       <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
         <Alert inputValues={inputsGetItem} closeModal={CloseAlertButton} />
       </Modal>

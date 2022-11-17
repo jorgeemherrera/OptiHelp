@@ -1,7 +1,35 @@
 .body-accordions {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 60px 0;
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+  }
+  #ul-afectaciones-oculares{
+    li{
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      box-shadow: none;
+    }
+  }
+  li {
+    box-shadow: 0px 9px 20px 2px #dee2f1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 60px 0;
+    align-items: center;
+    margin: 12px 0;
+    width: 100%;
+    max-width: 307px;
+    span{
+      font-family: "Russo One", sans-serif;
+    }
   }
+}
