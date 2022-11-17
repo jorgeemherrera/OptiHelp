@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { IconChevronDown, IconChevronUp } from '@tabler/icons';
+
 
 import './AccordianItem.scss';
 
@@ -23,8 +25,8 @@ const AccordianItem = ({ id, type, name, children, onToggle, active, multiple, o
                         </span>
                         <span className='lg-caret'>
                             {isActive ?
-                               'activo'
-                                :'inactivo'}
+                                <IconChevronDown />
+                                : <IconChevronDown />}
                         </span>
                     </div>
                 )
@@ -36,8 +38,8 @@ const AccordianItem = ({ id, type, name, children, onToggle, active, multiple, o
                         </span>
                         <span className='default-caret' data-testid={`${id}-caret`}>
                             {isActive ?
-                                'caret-up'
-                                : 'caret-down'}
+                                <IconChevronUp/>
+                                : <IconChevronDown />}
                         </span>
                     </div>
                 )
@@ -45,7 +47,7 @@ const AccordianItem = ({ id, type, name, children, onToggle, active, multiple, o
     }
 
     return (
-        <li id={id} data-testid={id} className='accordian-item'>
+        <li id={id} data-testid={id}  className={isActive ? "accordian-item p-active" : "accordian-item p-inactive"}>
             {getHeader(type)}
             {isActive &&
                 children

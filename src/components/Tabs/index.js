@@ -97,7 +97,7 @@ const TabsTipsHigiene = () => {
                 <TabsRecyclable
                     titleTab='Postura'
                 >
-                    <ul>
+                    <ul className="ul-tabs">
                         <li>La espalda debe estar en posición recta apoyada al respaldo de la silla.</li>
                         <li>
                             Se debe formar un ángulo de 90° entre la parte inferior del cuerpo y la parte superior, los pies deben estar apoyados sobre el suelo.
@@ -157,7 +157,7 @@ const TabsTipsHigiene = () => {
                         mediterránea, ha sido declarada como Patrimonio Cultural Inmaterial de la
                         Humanidad.
                         <p>La Dieta Mediterránea incluye:</p>
-                        <ul>
+                        <ul className="ul-tabs">
                             <li>Vegetales de hojas verdes y frutas coloridas</li>
                             <li>Frutos secos como almendras y nueces</li>
                             <li>Mariscos como la principal fuente de carne</li>

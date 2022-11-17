@@ -6,8 +6,7 @@ import { Navbar } from './components/Navbar';
 import { ToastContainer, toast } from 'react-toastify';
 import Alert from './components/Alert';
 import Modal from './components/Modal';
-import Accordian from './components/Accordian/Accordion';
-import AccordianItem from './components/Accordian/AccordianItem/AccordionItem';
+
 //icons and scss
 import { IconBellRinging } from '@tabler/icons';
 import 'react-toastify/dist/ReactToastify.css';
@@ -100,38 +99,8 @@ function App() {
       <Navbar />
       <button className='create-alert' onClick={onHandleClickAlert}><IconBellRinging />Crear Alerta</button>
       <Accordions />
-      {/* ------------------ ACORDEON ------------------- */}
-      <div className='details-drawer-accordian'>
-        <Accordian defaultOpen={0} multiple={false}>
-          <AccordianItem
-            id={`-product-category`}
-            name='Product Category'
-            value={0}
-            type='accordian-lg'
-            className='accordian-item'
-          >
-            <section className='category-grid'>
-              <p>lorem ipsum</p>
-            </section>
-          </AccordianItem>
-          <hr></hr>
-          <AccordianItem
-            id={`-product-owners`}
-            name='Product Owners'
-            value={1}
-            type='accordian-lg'
-          >
-            <section className='owners-grid'>
-              <p>segundo acodeon</p>
-            </section>
-          </AccordianItem>
-        </Accordian>
-      </div>
-      {/* ------------------ ACORDEON ------------------- */}
-
-
       {/* ------------------ TABS ------------------- */}
-      <section className='tab'>
+      {/* <section className='tab'>
         <div className='tab--container'>
           <Tabs id='product-detail-page-tabs' selectedTab={activeTab} onChange={handleChange}>
             {getDataDefinitionTab()}
@@ -151,9 +120,8 @@ function App() {
             <p>tab 3</p>
           </TabPanel>
         </div>
-      </section>
+      </section> */}
       {/* ------------------ TABS ------------------- */}
-
 
       <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
         <Alert inputValues={inputsGetItem} closeModal={CloseAlertButton} />

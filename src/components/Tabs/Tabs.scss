@@ -13,4 +13,13 @@
       height: auto;
       width: 300px;
     }
+    .ul-tabs{
+      li{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: none;
+      }
+    }
   }
