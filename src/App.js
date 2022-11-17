@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 //components
 import { Navbar } from './components/Navbar';
@@ -40,7 +40,7 @@ function App() {
   const onHandleClickAlert = () => {
     setModalState(!modalState);
   };
-
+  
   const convertTimeToMilliseconds = (value) => {
     return (+value[0] * (60000 * 60)) + (+value[1] * 60000)
   }
@@ -77,7 +77,7 @@ function App() {
     const interval = setInterval(() => {
       foundTimeToRange();
       console.log('foundTimeToRange', foundTimeToRange());
-    }, 61000);
+    }, 62000);
     return () => clearInterval(interval);
   });
 

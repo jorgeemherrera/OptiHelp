@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { AccordionRecyclable } from "../AccordionRecyclable";
+import React from "react";
 import { TabsTemasDeInteres, TabsTipsHigiene } from "../Tabs";
 import imageDownloadable from '../../assets/images/downloadable.png'
 import './Accordions.scss'
