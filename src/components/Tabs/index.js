@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { TabsRecyclable } from "../TabsRecyclable";
 import { DownloadPdf } from "../DownloadPdf";
 import { ImageParentSlide } from "../imagesParentSlide";
+// import { Tabs, Tab, TabPanel } from '../TabsJorge/Tabs';
+
 
 //images
 import hipermetropia from '../../assets/images/hipertrofia.png'
@@ -19,159 +21,343 @@ import Lantern from '../../assets/images/lampara.png'
 //icons and css
 import { IconLink } from '@tabler/icons';
 import './Tabs.scss'
+import AccordianItem from "../Accordian/AccordianItem/AccordionItem";
+import Accordian from "../Accordian/Accordion";
 
 
 const TabsTipsHigiene = () => {
+
+    // return (
+    //     <div className="poitns-accordion">
+    //         {/* <section section className='section first-point'>
+    //             <div>
+    //                 <TabsRecyclable
+    //                     titleTab='Usar prescripción óptica'
+    //                     paragraphTab='No olvides asistir al optómetra una vez al año para actualizar tu fórmula de gafas.'
+    //                     index="0"
+    //                 >
+    //                     <img src={glassesFirst} alt='girl-with-glasses' />
+    //                     <DownloadPdf />
+    //                 </TabsRecyclable>
+    //             </div>
+    //             <div>
+    //                 <TabsRecyclable
+    //                     titleTab='Las gafas deben contar con antirreflejo'
+    //                     paragraphTab='
+    //             El tratamiento antirreflejo consiste en un revestimiento que se hace al lente, por medio de una
+    //             delgada película de varias capas que se aplica sobre el mismo para reducir los reflejos y eliminar el
+    //             deslumbramiento. Esto te ayudará a tener una visión de mayor calidad. (AR convencional)
+    //             '
+    //                     index="1"
+    //                 >
+    //                     <p>
+    //                         Además, existen AR que protegen los ojos de la luz azul de las pantallas reduciendo la
+    //                         cantidad de luz que reciben los ojos.
+    //                     </p>
+    //                     <ImageParentSlide />
+    //                 </TabsRecyclable>
+    //             </div>
+    //         </section>
+
+    //         <section  className='section second-point'>
+    //             <TabsRecyclable
+    //                 titleTab='Mantener buena iluminación'
+    //                 paragraphTab='Evita trabajar en lugares con baja iluminación para evitar fatiga visual 
+    //                 y otras alteraciones producidas por la radiación azul.
+    //                 ¡Esto se logra prendiendo las luces…!'
+    //             >
+    //                 <img src={Lantern} alt='' className='lantern-image' />
+    //                 <DownloadPdf />
+    //                 <p>
+    //                     Esta
+    //                     <a style={{ marginRight: "7px" }} rel="noopener noreferrer" target="_blank" href='https://play.google.com/store/apps/details?id=crunchybytebox.lightmeter'>
+    //                         <IconLink />
+    //                         App
+    //                     </a>
+    //                     te muestra la cantidad de iluminación en el lugar donde estás:
+    //                     <br />
+    //                     <p>Lo que te ayudará a saber si cuentas con la iluminación adecuada en tu lugar de trabajo.</p>
+    //                 </p>
+    //                 <p>
+    //                     Si ingresas al siguiente link, te va a indicar las diferentes longitudes de onda que generan las pantallas de diferentes dispositivos:
+    //                     <a rel="noopener noreferrer" target="_blank" href='https://fluxometer.com/rainbow/#!id=iPad%20Pro/2300K-iPad%20Pro'>
+    //                         <IconLink />
+    //                         Fluxometer
+    //                     </a>
+    //                 </p>
+    //             </TabsRecyclable>
+    //         </section>
+
+    //         <section  className='section third-point'>
+    //             <TabsRecyclable
+    //                 titleTab='Distancia de Harmon'
+    //                 paragraphTab='Consiste en distanciar la pantalla en el espacio existente entre el codo y la muñeca.'
+    //             >
+    //                 <img src={codoMovil} alt='' />
+    //                 <DownloadPdf />
+    //             </TabsRecyclable>
+    //         </section>
+
+    //         <section  className='section fourth-point'>
+    //             <TabsRecyclable
+    //                 titleTab='Postura'
+    //             >
+    //                 <ul className="ul-tabs">
+    //                     <li>La espalda debe estar en posición recta apoyada al respaldo de la silla.</li>
+    //                     <li>
+    //                         Se debe formar un ángulo de 90° entre la parte inferior del cuerpo y la parte superior, los pies deben estar apoyados sobre el suelo.
+    //                     </li>
+    //                     <li>
+    //                         Evitar malas posturas de la cabeza y flexiones de cuello no mayores a 10° controlando la posición de la pantalla la cual debe estar posicionada frente a los ojos de forma paralela. Para prevenir alteraciones musculares causadas por las malas posiciones y las jornadas laborales extensas.
+    //                     </li>
+    //                 </ul>
+    //                 <img src={distanciaMonitor} alt='' />
+    //                 <DownloadPdf />
+    //             </TabsRecyclable>
+    //         </section> */}
+
+    //         {/* <section className='section five-point'>
+    //             <TabsRecyclable
+    //                 titleTab='Ambiente'
+    //                 paragraphTab='La temperatura en el lugar de trabajo debe estar entre 17° y 27°. Es necesario evitar ambientes con temperaturas elevadas y exposición directa al aire acondicionado ya que desencadenan cansancio ocular y un aumento en la evaporación lagrimal.'
+    //             >
+    //                 <img src={calefactor} alt='' />
+    //                 <DownloadPdf />
+    //             </TabsRecyclable>
+    //         </section> */}
+
+    //         {/* <section className='section seven-point'>
+    //             <TabsRecyclable
+    //                 titleTab='Pausas activas'
+    //                 paragraphTab=' Es necesario hacer pausas activas para disminuir el uso excesivo de
+    //             la visión próxima y así se permite relajar la acomodación y disminuir el estrés
+    //             visual.'
+    //             >
+    //                 <img src={twentyMinutes} alt='' />
+    //                 <DownloadPdf />
+    //             </TabsRecyclable>
+    //         </section> */}
+
+    //         {/* <section className='section heigth-point'>
+    //             <TabsRecyclable
+    //                 titleTab='No olvides parpadear'
+    //                 paragraphTab=' Cuando nos concentramos, disminuimos el parpadeo hasta
+    //             5 veces por minuto, lo ideal es que parpadeemos entre 15 y 20 veces por minuto,
+    //             con el fin de proveer lubricación al ojo.'
+    //             >
+    //                 <img src={parpadeo} alt='' />
+    //                 <DownloadPdf />
+    //             </TabsRecyclable>
+    //         </section> */}
+
+    //         <section className='section six-point'>
+    //             <TabsRecyclable
+    //                 titleTab='Alimentación'
+    //             >
+    //                 <p>
+    //                     Alimentarnos va mucho más allá que consumir alimentos, es
+    //                     necesario adquirir alimentos sanos y equilibrados, por ejemplo, la dieta
+    //                     mediterránea, ha sido declarada como Patrimonio Cultural Inmaterial de la
+    //                     Humanidad.
+    //                     <p>La Dieta Mediterránea incluye:</p>
+    //                     <ul className="ul-tabs">
+    //                         <li>Vegetales de hojas verdes y frutas coloridas</li>
+    //                         <li>Frutos secos como almendras y nueces</li>
+    //                         <li>Mariscos como la principal fuente de carne</li>
+    //                         <li>Grasas saludables. Elija aceite de oliva en vez de la mantequilla</li>
+    //                         <li>Pan, cereales y pastas integrales</li>
+    //                         <li>Agregar muchas hierbas y especias a los alimentos para reducir la ingesta de</li>
+    //                         sal
+    //                         <li>Cantidad moderada de lácteos (yogurt y queso) y huevos.</li>
+    //                     </ul>
+    //                 </p>
+    //                 <img src={food} alt='' />
+    //                 <p>Cuidarnos con la alimentación nos proporciona una salud ocular efectiva a largo plazo</p>
+    //                 <p>Para mayor información… </p>
+    //                 <a href="https://www.aao.org/salud-ocular/consejos/dieta-nutricion" rel="noopener noreferrer" target='_blank'> <IconLink /> Dieta y nutrición </a><br />
+    //                 <a href="https://nutricion.org/wp-content/uploads/2019/04/Dieta-Mediterranea-Avances-2014.pdf " rel="noopener noreferrer" target='_blank'> <IconLink /> Dieta mediterranea avances </a>
+    //             </TabsRecyclable>
+    //         </section>
+
+    //     </div>
+    // )
     return (
-        <div className="poitns-accordion">
-            <section className='section first-point'>
-                <TabsRecyclable
-                    titleTab='Usar prescripción óptica'
-                    paragraphTab='No olvides asistir al optómetra una vez al año para actualizar tu fórmula de gafas.'
-                    index="0"
-                >
-                    <img src={glassesFirst} alt='girl-with-glasses' />
-                    <DownloadPdf />
-                </TabsRecyclable>
-                <TabsRecyclable
-                    titleTab='Las gafas deben contar con antirreflejo'
-                    paragraphTab='
-                El tratamiento antirreflejo consiste en un revestimiento que se hace al lente, por medio de una
-                delgada película de varias capas que se aplica sobre el mismo para reducir los reflejos y eliminar el
-                deslumbramiento. Esto te ayudará a tener una visión de mayor calidad. (AR convencional)
-                '
-                    index="1"
-                >
-                    <p>
-                        Además, existen AR que protegen los ojos de la luz azul de las pantallas reduciendo la
-                        cantidad de luz que reciben los ojos.
-                    </p>
-                    <ImageParentSlide />
-                </TabsRecyclable>
-            </section>
+        <div id="tabs-parent-div">
+            <Accordian defaultOpen={0} multiple={false}>
 
-            <section className='section second-point'>
-                <TabsRecyclable
-                    titleTab='Mantener buena iluminación'
-                    paragraphTab='Evita trabajar en lugares con baja iluminación para evitar fatiga visual 
-                    y otras alteraciones producidas por la radiación azul.
-                    ¡Esto se logra prendiendo las luces…!'
+                <AccordianItem
+                    id={`optic-prescription`}
+                    name='Usar prescripción óptica'
+                    value={1}
                 >
-                    <img src={Lantern} alt='' className='lantern-image' />
-                    <DownloadPdf />
-                    <p>
-                        Esta
-                        <a style={{ marginRight: "7px" }} rel="noopener noreferrer" target="_blank" href='https://play.google.com/store/apps/details?id=crunchybytebox.lightmeter'>
-                            <IconLink />
-                            App
-                        </a>
-                        te muestra la cantidad de iluminación en el lugar donde estás:
-                        <br />
-                        <p>Lo que te ayudará a saber si cuentas con la iluminación adecuada en tu lugar de trabajo.</p>
-                    </p>
-                    <p>
-                        Si ingresas al siguiente link, te va a indicar las diferentes longitudes de onda que generan las pantallas de diferentes dispositivos:
-                        <a rel="noopener noreferrer" target="_blank" href='https://fluxometer.com/rainbow/#!id=iPad%20Pro/2300K-iPad%20Pro'>
-                            <IconLink />
-                            Fluxometer
-                        </a>
-                    </p>
-                </TabsRecyclable>
-            </section>
+                    <section className='category-grid'>
+                        <p>No olvides asistir al optómetra una vez al año para actualizar tu fórmula de gafas.</p>
+                        <img src={glassesFirst} alt='girl-with-glasses' />
+                        <DownloadPdf />
+                    </section>
+                </AccordianItem>
 
-            <section className='section third-point'>
-                <TabsRecyclable
-                    titleTab='Distancia de Harmon'
-                    paragraphTab='Consiste en distanciar la pantalla en el espacio existente entre el codo y la muñeca.'
+                <AccordianItem
+                    id={`glass-antiglare`}
+                    name='Las gafas deben contar con antirreflejo'
+                    value={2}
                 >
-                    <img src={codoMovil} alt='' />
-                    <DownloadPdf />
-                </TabsRecyclable>
-            </section>
+                    <section className='category-grid'>
+                        <p>
+                            El tratamiento antirreflejo consiste en un revestimiento que se hace al lente, por medio de una
+                            delgada película de varias capas que se aplica sobre el mismo para reducir los reflejos y eliminar el
+                            deslumbramiento. Esto te ayudará a tener una visión de mayor calidad. (AR convencional)
+                        </p>
+                        <p>
+                            Además, existen AR que protegen los ojos de la luz azul de las pantallas reduciendo la
+                            cantidad de luz que reciben los ojos.
+                        </p>
+                        <ImageParentSlide />
+                    </section>
+                </AccordianItem>
 
-            <section className='section fourth-point'>
-                <TabsRecyclable
-                    titleTab='Postura'
+                <AccordianItem
+                    id={`illumination`}
+                    name='Mantener buena iluminación'
+                    value={3}
                 >
-                    <ul className="ul-tabs">
-                        <li>La espalda debe estar en posición recta apoyada al respaldo de la silla.</li>
-                        <li>
-                            Se debe formar un ángulo de 90° entre la parte inferior del cuerpo y la parte superior, los pies deben estar apoyados sobre el suelo.
-                        </li>
-                        <li>
-                            Evitar malas posturas de la cabeza y flexiones de cuello no mayores a 10° controlando la posición de la pantalla la cual debe estar posicionada frente a los ojos de forma paralela. Para prevenir alteraciones musculares causadas por las malas posiciones y las jornadas laborales extensas.
-                        </li>
-                    </ul>
-                    <img src={distanciaMonitor} alt='' />
-                    <DownloadPdf />
-                </TabsRecyclable>
-            </section>
+                    <section className='category-grid'>
+                        <img src={Lantern} alt='' className='lantern-image' />
+                        <DownloadPdf />
+                        <p>
+                            Evita trabajar en lugares con baja iluminación para evitar fatiga visual
+                            y otras alteraciones producidas por la radiación azul.
+                            ¡Esto se logra prendiendo las luces…!
+                        </p>
+                        <p>
+                            Esta
+                            <a style={{ marginRight: "7px" }} rel="noopener noreferrer" target="_blank" href='https://play.google.com/store/apps/details?id=crunchybytebox.lightmeter'>
+                                <IconLink />
+                                App
+                            </a>
+                            te muestra la cantidad de iluminación en el lugar donde estás:
+                            <br />
+                            <p>Lo que te ayudará a saber si cuentas con la iluminación adecuada en tu lugar de trabajo.</p>
+                        </p>
+                        <p>
+                            Si ingresas al siguiente link, te va a indicar las diferentes longitudes de onda que generan las pantallas de diferentes dispositivos:
+                            <a rel="noopener noreferrer" target="_blank" href='https://fluxometer.com/rainbow/#!id=iPad%20Pro/2300K-iPad%20Pro'>
+                                <IconLink />
+                                Fluxometer
+                            </a>
+                        </p>
+                    </section>
+                </AccordianItem>
 
-            <section className='section five-point'>
-                <TabsRecyclable
-                    titleTab='Ambiente'
-                    paragraphTab='La temperatura en el lugar de trabajo debe estar entre 17° y 27°. Es necesario evitar ambientes con temperaturas elevadas y exposición directa al aire acondicionado ya que desencadenan cansancio ocular y un aumento en la evaporación lagrimal.'
+                <AccordianItem
+                    id={`harmon`}
+                    name='Distancia de Harmon'
+                    value={4}
                 >
-                    <img src={calefactor} alt='' />
-                    <DownloadPdf />
-                </TabsRecyclable>
-            </section>
+                    <section className='category-grid'>
+                        <p>Consiste en distanciar la pantalla en el espacio existente entre el codo y la muñeca.</p>
+                        <img src={codoMovil} alt='' />
+                        <DownloadPdf />
+                    </section>
+                </AccordianItem>
 
-            <section className='section seven-point'>
-                <TabsRecyclable
-                    titleTab='Pausas activas'
-                    paragraphTab=' Es necesario hacer pausas activas para disminuir el uso excesivo de
-                la visión próxima y así se permite relajar la acomodación y disminuir el estrés
-                visual.'
+                <AccordianItem
+                    id={`position`}
+                    name='Postura'
+                    value={5}
                 >
-                    <img src={twentyMinutes} alt='' />
-                    <DownloadPdf />
-                </TabsRecyclable>
-            </section>
-
-            <section className='section heigth-point'>
-                <TabsRecyclable
-                    titleTab='No olvides parpadear'
-                    paragraphTab=' Cuando nos concentramos, disminuimos el parpadeo hasta
-                5 veces por minuto, lo ideal es que parpadeemos entre 15 y 20 veces por minuto,
-                con el fin de proveer lubricación al ojo.'
-                >
-                    <img src={parpadeo} alt='' />
-                    <DownloadPdf />
-                </TabsRecyclable>
-            </section>
-
-            <section className='section six-point'>
-                <TabsRecyclable
-                    titleTab='Alimentación'
-                >
-                    <p>
-                        Alimentarnos va mucho más allá que consumir alimentos, es
-                        necesario adquirir alimentos sanos y equilibrados, por ejemplo, la dieta
-                        mediterránea, ha sido declarada como Patrimonio Cultural Inmaterial de la
-                        Humanidad.
-                        <p>La Dieta Mediterránea incluye:</p>
-                        <ul className="ul-tabs">
-                            <li>Vegetales de hojas verdes y frutas coloridas</li>
-                            <li>Frutos secos como almendras y nueces</li>
-                            <li>Mariscos como la principal fuente de carne</li>
-                            <li>Grasas saludables. Elija aceite de oliva en vez de la mantequilla</li>
-                            <li>Pan, cereales y pastas integrales</li>
-                            <li>Agregar muchas hierbas y especias a los alimentos para reducir la ingesta de</li>
-                            sal
-                            <li>Cantidad moderada de lácteos (yogurt y queso) y huevos.</li>
+                    <section className='category-grid'>
+                        <ul type="circle" className="ul-tabs">
+                            <li>-La espalda debe estar en posición recta apoyada al respaldo de la silla.</li>
+                            <li>
+                                -Se debe formar un ángulo de 90° entre la parte inferior del cuerpo y la parte superior, los pies deben estar apoyados sobre el suelo.
+                            </li>
+                            <li>
+                               - Evitar malas posturas de la cabeza y flexiones de cuello no mayores a 10° controlando la posición de la pantalla la cual debe estar posicionada frente a los ojos de forma paralela. Para prevenir alteraciones musculares causadas por las malas posiciones y las jornadas laborales extensas.
+                            </li>
                         </ul>
-                    </p>
-                    <img src={food} alt='' />
-                    <p>Cuidarnos con la alimentación nos proporciona una salud ocular efectiva a largo plazo</p>
-                    <p>Para mayor información… </p>
-                    <a href="https://www.aao.org/salud-ocular/consejos/dieta-nutricion" rel="noopener noreferrer" target='_blank'> <IconLink/> Dieta y nutrición </a><br/>
-                    <a href="https://nutricion.org/wp-content/uploads/2019/04/Dieta-Mediterranea-Avances-2014.pdf " rel="noopener noreferrer" target='_blank'> <IconLink/> Dieta mediterranea avances </a>
-                </TabsRecyclable>
-            </section>
+                        <img src={distanciaMonitor} alt='' />
+                    </section>
+                </AccordianItem>
 
+                <AccordianItem
+                    id={`ambient`}
+                    name='Ambiente'
+                    value={6}
+                >
+                    <section className='category-grid'>
+
+                        <p>La temperatura en el lugar de trabajo debe estar entre 17° y 27°. Es necesario evitar ambientes con temperaturas elevadas y exposición directa al aire acondicionado ya que desencadenan cansancio ocular y un aumento en la evaporación lagrimal.</p>
+                        <img src={calefactor} alt='' />
+                        <DownloadPdf />
+                    </section>
+                </AccordianItem>
+
+                <AccordianItem
+                    id={`active breaks`}
+                    name='Pausas activas'
+                    value={7}
+                >
+                    <section className='category-grid'>
+                        <p> Es necesario hacer pausas activas para disminuir el uso excesivo de
+                            la visión próxima y así se permite relajar la acomodación y disminuir el estrés
+                            visual
+                        </p>
+                        <img src={twentyMinutes} alt='' />
+                        <DownloadPdf />
+                    </section>
+                </AccordianItem>
+
+                <AccordianItem
+                    id={`blink`}
+                    name='No olvides parpadear'
+                    value={8}
+                >
+                    <section className='category-grid'>
+                        <p> Cuando nos concentramos, disminuimos el parpadeo hasta
+                            5 veces por minuto, lo ideal es que parpadeemos entre 15 y 20 veces por minuto,
+                            con el fin de proveer lubricación al ojo.
+                        </p>
+                        <img src={parpadeo} alt='' />
+                        <DownloadPdf />
+                    </section>
+                </AccordianItem>
+
+                <AccordianItem
+                    id={`feeding`}
+                    name='Alimentación'
+                    value={9}
+                >
+                    <section className='category-grid'>
+                        <p>
+                            Alimentarnos va mucho más allá que consumir alimentos, es
+                            necesario adquirir alimentos sanos y equilibrados, por ejemplo, la dieta
+                            mediterránea, ha sido declarada como Patrimonio Cultural Inmaterial de la
+                            Humanidad.
+                            <p>La Dieta Mediterránea incluye:</p>
+                            <ul className="ul-tabs">
+                                <li>Vegetales de hojas verdes y frutas coloridas</li>
+                                <li>Frutos secos como almendras y nueces</li>
+                                <li>Mariscos como la principal fuente de carne</li>
+                                <li>Grasas saludables. Elija aceite de oliva en vez de la mantequilla</li>
+                                <li>Pan, cereales y pastas integrales</li>
+                                <li>Agregar muchas hierbas y especias a los alimentos para reducir la ingesta de</li>
+                                sal
+                                <li>Cantidad moderada de lácteos (yogurt y queso) y huevos.</li>
+                            </ul>
+                        </p>
+                        <img src={food} alt='' />
+                        <p>Cuidarnos con la alimentación nos proporciona una salud ocular efectiva a largo plazo</p>
+                        <p>Para mayor información… </p>
+                        <a href="https://www.aao.org/salud-ocular/consejos/dieta-nutricion" rel="noopener noreferrer" target='_blank'> <IconLink /> Dieta y nutrición </a><br />
+                        <a href="https://nutricion.org/wp-content/uploads/2019/04/Dieta-Mediterranea-Avances-2014.pdf " rel="noopener noreferrer" target='_blank'> <IconLink /> Dieta mediterranea avances </a>
+                    </section>
+                </AccordianItem>
+
+            </Accordian>
         </div>
-    )
+    );
+
 }
 
 const TabsTemasDeInteres = () => {

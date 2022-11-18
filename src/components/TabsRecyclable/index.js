@@ -4,7 +4,8 @@ import './TabsRecyclable.scss'
 const TabsRecyclable = ({
     children,
     titleTab,
-    paragraphTab
+    paragraphTab,
+    state
 }) => {
 
     const [clickTab, setClickTab] = useState(false);
