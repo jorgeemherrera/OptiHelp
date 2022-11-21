@@ -18,12 +18,12 @@ const Alert = ({ inputValues, closeModal }) => {
             setEndTime(value)
         }
     }
+
     useEffect(() => {
         setFormTimeValues(Object.assign({ startTime, endTime }));
         const filteredState = { startTime, endTime };
         localStorage.setItem('formTimeValues', JSON.stringify(filteredState))
     },[startTime,endTime])
-
 
     useEffect(() => {
         if (inputValues) {
@@ -31,7 +31,6 @@ const Alert = ({ inputValues, closeModal }) => {
             setEndValue(inputValues.endTime)
         }
     }, [inputValues]);
-
 
     return (
         <>
