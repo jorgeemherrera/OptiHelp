@@ -10,6 +10,7 @@ const Alert = ({ inputValues, closeModal }) => {
     const [formTimeValues, setFormTimeValues] = useState({});
     const [startValue, setStartValue] = useState();
     const [endValue, setEndValue] = useState();
+    const [completeInputs, setCompleteInputs] = useState(false);
 
     const onChangeInputTime = (value, name) => {
         if (name === 'startTime') {
@@ -17,10 +18,13 @@ const Alert = ({ inputValues, closeModal }) => {
         } else {
             setEndTime(value)
         }
+    }
+    useEffect(() => {
         setFormTimeValues(Object.assign({ startTime, endTime }));
         const filteredState = { startTime, endTime };
         localStorage.setItem('formTimeValues', JSON.stringify(filteredState))
-    }
+    },[startTime,endTime])
+
 
     useEffect(() => {
         if (inputValues) {
@@ -29,6 +33,16 @@ const Alert = ({ inputValues, closeModal }) => {
         }
     }, [inputValues]);
 
+
+
+    useEffect(() => {
+        if (startTime === undefined || endTime === undefined) {
+            setCompleteInputs(false)
+        } else {
+            setCompleteInputs(true)
+        }
+    }, [startTime, endTime])
+
     return (
         <>
             <div className='form-container'>
@@ -36,7 +50,7 @@ const Alert = ({ inputValues, closeModal }) => {
                 <input type="time" name="startTime" id="startTime" value={startValue} onChange={e => onChangeInputTime(e.target.value, 'startTime')} />
                 <label for="endTime">Hora final:</label>
                 <input type="time" name="endTime" id="endTime" value={endValue} onChange={e => onChangeInputTime(e.target.value, 'endTime')} />
-                <button className='button-alert' onClick={closeModal}><IconBellRinging /> Crear Alerta</button>
+                    <button className='button-alert' onClick={closeModal}><IconBellRinging /> Crear Alerta</button> 
             </div>
         </>
     )
