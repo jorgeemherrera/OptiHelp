@@ -1,5 +1,5 @@
 import React from "react";
-import { TabsTemasDeInteres, TabsTipsHigiene } from "../Tabs";
+import { TabsEvidenciaCientifica, TabsTemasDeInteres, TabsTipsHigiene } from "../Tabs";
 import imageDownloadable from '../../assets/images/downloadable.png'
 import './Accordions.scss'
 import AccordianItem from "../Accordian/AccordianItem/AccordionItem";
@@ -102,6 +102,20 @@ const Accordions = () => {
             <TabsTemasDeInteres />
           </section>
         </AccordianItem>
+
+        <AccordianItem
+          id={`-last-section`}
+          name='EVIDENCIA CIENTIFICA'
+          value={6}
+        >
+          <section className='poitns-accordion'>
+            <p>La información brindada en este prototipo de aplicación está sustentada bajo la siguiente
+              bibliografía avalada científicamente:
+            </p>
+            <TabsEvidenciaCientifica />
+          </section>
+        </AccordianItem>
+
       </Accordian>
     </div>
   );
