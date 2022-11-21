@@ -51,8 +51,6 @@ function App() {
   let endTimeMilliseconds = (convertTimeToMilliseconds(String(endValue).split(":")));
   let timeNowMilliseconds = (convertTimeToMilliseconds(String(timeNow).split(":")));
 
-  // console.log('startTimeMilliseconds, endTimeMilliseconds, timeNowMilliseconds', startTimeMilliseconds, endTimeMilliseconds, timeNowMilliseconds);
-
   const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + (i * step));
 
   let hoursRange = range(startTimeMilliseconds, endTimeMilliseconds, 60000);
@@ -68,9 +66,6 @@ function App() {
     console.log('foundTimeInRange', foundTimeInRange)
   }
 
-
-
-
   useEffect(() => {
     const interval = setInterval(() => {
       foundTimeToRange();
@@ -78,8 +73,6 @@ function App() {
     }, 62000);
     return () => clearInterval(interval);
   });
-
-
 
   return (
     <div className='App'>
@@ -97,7 +90,5 @@ function App() {
     </div>
   );
 }
-
-
 
 export default App;
