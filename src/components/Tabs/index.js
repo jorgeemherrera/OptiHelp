@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import { TabsRecyclable } from "../TabsRecyclable";
+import React from "react";
 import { DownloadPdf } from "../DownloadPdf";
 import { ImageParentSlide } from "../imagesParentSlide";
-// import { Tabs, Tab, TabPanel } from '../TabsJorge/Tabs';
 
 
 //images
@@ -266,7 +264,248 @@ const TabsTemasDeInteres = () => {
     )
 }
 
+const TabsEvidenciaCientifica = () => {
+    return (
+        <div id="tabs-parent-div">
+            <Accordian>
+                <AccordianItem
+                    id={`-visual-hygiene`}
+                    name='Higiene visual'
+                    value={1}
+                >
+                    <p>
+                        Alteraciones en la salud visual y ocular por el uso de pantallas y dispositivos electrónicos en trabajadores de la
+                        IPS Proteger
+                    </p>
+                </AccordianItem>
+
+                <AccordianItem
+                    id={`-eye-conditions`}
+                    name='Afecciones oculares'
+                    value={2}
+                >
+                    <section className='category-grid'>
+                        <ul class="ul-tabs">
+                            <li>Arteaga Peralta JJ. Consejos de higiene visual en unas oficinas municipales de Terrassa. 2021</li>
+                            <li>Nicolás Benavides Rosero M, Alexander Correa Niño D, Niño Muriel R, Rosero B, Niño C. Calidad de la lágrima
+                                en usuarios de computador a través de meibografía, NIBUT y menisco lagrimal, relacionado con el
+                                cuestionario OSDI.
+                            </li>
+                            <li>Características de la película lagrimal con el uso de dispositivos móviles en estudiantes del programa de
+                                optometría de la Universidad el Bosque.
+                            </li>
+                            <li> Salinas RR, Flores FH, Madrigal AZ. Repercusiones en la salud a causa del teletrabajo. Revista Médica Sinergia.
+                                2021 feb 24
+                            </li>
+                            <li>Profesional Farmacia Y Bioquímica C de, Quispe Cárdenas Katerin L Huari Escobedo HR, Perez C, Antonio J.
+                                FACULTAD DE CIENCIAS DE LA SALUD.
+                            </li>
+                            <li>Arias Díaz A, Bernal Reyes N, Camacho Rangel LE. Efectos de los dispositivos electrónicos sobre el sistema
+                                visual. Revista Mexicana de Oftalmología. 2017 mar 1;91(2):103–6.
+                            </li>
+                            <li>Arias Lizeth. CAMBIOS ACOMODATIVOS EN USUARIOS DE PANTALLAS ELECTRÓNICAS: REVISIÓN
+                                BIBLIOGRÁFICA. 2020.
+                            </li>
+                            <li>
+                                LUDIZACA QUISHPE J. ESTUDIO DE LA EFECTIVIDAD, CONFORT, Y CALIDAD VISUAL DEL FILTRO AZUL VS
+                                ANTIRREFLEJO AZUL, EN LOS PACIENTES QUE ACUDEN A LA CONSULTA OPTOMÉTRICA DE LA ÓPTICA “TU
+                                CENTRO ÓPTICO” DEL DISTRITO METROPOLITANO DE QUITO, PERIODO 2017-2018. REALIZACIÓN DE UNA
+                                CAMPAÑA PUBLICITARIA DE PREVENCIÓN SOBRE LAS CONSECUENCIAS DE LA LUZ AZUL. 2018
+                            </li>
+                        </ul>
+                    </section>
+                </AccordianItem>
+
+                <AccordianItem
+                    id={`optical-prescription`}
+                    name='Prescripción óptica'
+                    value={3}
+                >
+                    <section className='category-grid'>
+                        <ul class="ul-tabs">
+                            <li>
+                                Profesional Farmacia Y Bioquímica C de, Quispe Cárdenas Katerin L Huari Escobedo HR, Perez C, Antonio J.
+                                FACULTAD DE CIENCIAS DE LA SALUD.
+                            </li>
+                            <li>
+                                Alteraciones en la salud visual y ocular por el uso de pantallas y dispositivos electrónicos en trabajadores de la
+                                IPS Proteger
+                            </li>
+                        </ul>
+                    </section>
+                </AccordianItem>
+
+                <AccordianItem
+                    id={`blue-light`}
+                    name='Luz azul'
+                    value={4}
+                >
+                    <section className='category-grid'>
+                        <ul class="ul-tabs">
+                            <li>
+                                Alteraciones en la salud visual y ocular por el uso de pantallas y dispositivos electrónicos en trabajadores de la
+                                IPS Proteger
+                            </li>
+                            <li>
+                                LUDIZACA QUISHPE J. ESTUDIO DE LA EFECTIVIDAD, CONFORT, Y CALIDAD VISUAL DEL FILTRO AZUL VS
+                                ANTIRREFLEJO AZUL, EN LOS PACIENTES QUE ACUDEN A LA CONSULTA OPTOMÉTRICA DE LA ÓPTICA “TU
+                                CENTRO ÓPTICO” DEL DISTRITO METROPOLITANO DE QUITO, PERIODO 2017-2018. REALIZACIÓN DE UNA
+                                CAMPAÑA PUBLICITARIA DE PREVENCIÓN SOBRE LAS CONSECUENCIAS DE LA LUZ AZUL. 2018
+                            </li>
+                        </ul>
+                    </section>
+                </AccordianItem>
+
+                <AccordianItem
+                    id={`ambient`}
+                    name='Ambiente'
+                    value={6}
+                >
+                    <section className='category-grid'>
+                        <ul class="ul-tabs">
+                            <li>
+                                Arteaga Peralta JJ. Consejos de higiene visual en unas oficinas municipales de Terrassa.
+                                2021
+                            </li>
+                            <li>
+                                Riva M, Piergiovanni L, Schiraldi A. ERGONOMÍA AMBIENTAL: Iluminación y confort
+                                térmico en trabajadores de oficinas con pantalla de visualización de datos. Revista
+                                Ingeniería, Matemáticas y Ciencias de la Información [Internet]. 2014 ago 10
+                            </li>
+                        </ul>
+
+                    </section>
+                </AccordianItem>
+
+
+
+
+
+                <AccordianItem
+                    id={`illumination`}
+                    name='Iluminación'
+                    value={7}
+                >
+                    <section className='category-grid'>
+                        <ul class="ul-tabs">
+                            <li>
+                                Arteaga Peralta JJ. Consejos de higiene visual en unas oficinas municipales de Terrassa.
+                                2021
+                            </li>
+                            <li>
+                                Riva M, Piergiovanni L, Schiraldi A. ERGONOMÍA AMBIENTAL: Iluminación y confort
+                                térmico en trabajadores de oficinas con pantalla de visualización de datos. Revista
+                                Ingeniería, Matemáticas y Ciencias de la Información [Internet]. 2014 ago 10
+                            </li>
+                        </ul>
+
+                    </section>
+                </AccordianItem>
+
+                <AccordianItem
+                    id={`Position`}
+                    name='Postura'
+                    value={8}
+                >
+                    <section className='category-grid'>
+                        <ul class="ul-tabs">
+                            <li>
+                                Arteaga Peralta JJ. Consejos de higiene visual en unas oficinas municipales de Terrassa.
+                                2021
+                            </li>
+                            <li>
+                                Riva M, Piergiovanni L, Schiraldi A. ERGONOMÍA AMBIENTAL: Iluminación y confort
+                                térmico en trabajadores de oficinas con pantalla de visualización de datos. Revista
+                                Ingeniería, Matemáticas y Ciencias de la Información [Internet]. 2014 ago 10
+                            </li>
+                        </ul>
+
+                    </section>
+                </AccordianItem>
+
+
+                <AccordianItem
+                    id={`-harmon-distance`}
+                    name='Distancia de Harmon'
+                    value={9}
+                >
+                    <section className='category-grid'>
+                        <p>
+                            Goss DA. Darrell Boyd Harmon (1898-1975). Hindsight: Journal of Optometry History
+                            [Internet]. 2018 nov 6
+                        </p>
+                    </section>
+                </AccordianItem>
+
+
+                <AccordianItem
+                    id={`active-breaks`}
+                    name='Pausas activas'
+                    value={10}
+                >
+                    <section className='category-grid'>
+                        <ul class="ul-tabs">
+                            <li>
+                                Idalmis L, Leyé F, Yankiel T, Castellano B, Ana L, Grandales Laffita E, et al. REVISIÓN
+                                BIBLIOGRÁFICA Síndrome visual informático.
+                            </li>
+                            <li>
+                                Arteaga Peralta JJ. Consejos de higiene visual en unas oficinas municipales de Terrassa.
+                                2021
+                            </li>
+                            <li>
+                                Profesional Farmacia Y Bioquímica C de, Quispe Cárdenas Katerin L Huari Escobedo HR,
+                                Perez C, Antonio J. FACULTAD DE CIENCIAS DE LA SALUD.
+                            </li>
+                        </ul>
+
+                    </section>
+                </AccordianItem>
+
+
+                <AccordianItem
+                    id={`flicker`}
+                    name='Parpadeo'
+                    value={11}
+                >
+                    <section className='category-grid'>
+                        <ul class="ul-tabs">
+                            <li>
+                                Arteaga Peralta JJ. Consejos de higiene visual en unas oficinas municipales de Terrassa.
+                                2021
+                            </li>
+                            <li>
+                                Características de la película lagrimal con el uso de dispositivos móviles en estudiantes del
+                                programa de optometría de la Universidad el Bosque
+                            </li>
+                        </ul>
+
+                    </section>
+                </AccordianItem>
+
+
+                <AccordianItem
+                    id={`diet`}
+                    name='Dieta'
+                    value={12}
+                >
+                    <section className='category-grid'>
+                        <p>
+                            Molina-Leyva I. Influencia del Patrón de Dieta Mediterráneo sobre la superficie ocular.
+                            2020 nov 10
+                        </p>
+                    </section>
+                </AccordianItem>
+
+
+
+            </Accordian>
+        </div>
+    )
+}
+
 export {
     TabsTemasDeInteres,
-    TabsTipsHigiene
+    TabsTipsHigiene,
+    TabsEvidenciaCientifica
 }
