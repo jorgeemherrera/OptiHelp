@@ -10,7 +10,6 @@ const Alert = ({ inputValues, closeModal }) => {
     const [formTimeValues, setFormTimeValues] = useState({});
     const [startValue, setStartValue] = useState();
     const [endValue, setEndValue] = useState();
-    const [completeInputs, setCompleteInputs] = useState(false);
 
     const onChangeInputTime = (value, name) => {
         if (name === 'startTime') {
@@ -33,15 +32,6 @@ const Alert = ({ inputValues, closeModal }) => {
         }
     }, [inputValues]);
 
-
-
-    useEffect(() => {
-        if (startTime === undefined || endTime === undefined) {
-            setCompleteInputs(false)
-        } else {
-            setCompleteInputs(true)
-        }
-    }, [startTime, endTime])
 
     return (
         <>
