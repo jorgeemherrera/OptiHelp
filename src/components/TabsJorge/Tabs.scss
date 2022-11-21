@@ -1,0 +1,79 @@
+
+@import "animate.css";
+
+section {
+    &.tab {
+        margin-left: 8.5rem;
+    }
+
+    .tab {
+        &--container {
+            display: flex;
+        }
+
+        &--header-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &--panel {
+            flex-direction: column;
+            font-size: 2rem;
+            height: 100%;
+            justify-content: center;
+            width: 100%;
+
+            &.animate__animated.animate__fadeIn {
+                --animation-duration: 600ms;
+                -webkit-animation-duration: 600ms;
+                animation-duration: 600ms;
+            }
+        }
+
+        &--panel-container {
+            height: 80vh;
+
+            &.inactive {
+                background-color: gray;
+            }
+        }
+
+        &--holder {
+            border-bottom: 1px solid gray;
+            display: flex;
+            margin-top: 8rem;
+            min-width: 100%;
+
+
+            button {
+                background-color: transparent;
+                border: none;
+                color: gray;
+                min-width: 150px;
+                cursor: pointer;
+                font-family: "Effra";
+                font-size: 1rem;
+                font-weight: 600;
+                letter-spacing: 0.02em;
+                line-height: 1.1rem;
+                margin-right: 1rem;
+                margin-left: 2rem;
+                padding: 1.25rem 0 0.6rem 0;
+                text-transform: uppercase;
+                width: 14%;
+
+
+                &.active {
+                    border-bottom: 4px solid blue;
+                    color: blue;
+                    transition: 0.1s ease-in;
+                }
+            }
+        }
+
+        &--inactive {
+            opacity: 0.65;
+        }
+    }
+}

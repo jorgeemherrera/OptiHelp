@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 //components
 import { Navbar } from './components/Navbar';
 import { ToastContainer, toast } from 'react-toastify';
+import { Accordions } from './components/Accordions';
 import Alert from './components/Alert';
 import Modal from './components/Modal';
 
@@ -11,14 +12,12 @@ import Modal from './components/Modal';
 import { IconBellRinging, IconPlaystationX } from '@tabler/icons';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.scss';
-import { Accordions } from './components/Accordions';
 
 function App() {
   const [endValue, setEndValue] = useState();
   const [modalState, setModalState] = useState(false);
   const [startValue, setStartValue] = useState();
   const [successAlert, setSuccessAlert] = useState(false);
-
   let inputsGetItem = JSON.parse(localStorage.getItem('formTimeValues'));
   const navigate = useNavigate();
 
@@ -29,10 +28,6 @@ function App() {
     }
   }, [inputsGetItem]);
 
-  const onHandleClickAlert = () => {
-    setModalState(!modalState);
-  };
-
   const CloseAlertButton = () => {
     setSuccessAlert(true);
     setModalState(false);
@@ -40,6 +35,11 @@ function App() {
       navigate(0);
     }, 3500);
   }
+
+  const onHandleClickAlert = () => {
+    setModalState(!modalState);
+  };
+  
   const convertTimeToMilliseconds = (value) => {
     return (+value[0] * (60000 * 60)) + (+value[1] * 60000)
   }
@@ -67,6 +67,9 @@ function App() {
     console.log('foundTimeInRange', foundTimeInRange)
   }
 
+
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       foundTimeToRange();
@@ -75,11 +78,14 @@ function App() {
     return () => clearInterval(interval);
   });
 
+
+
   return (
     <div className='App'>
       <Navbar />
       <button className='create-alert' onClick={onHandleClickAlert}><IconBellRinging />Crear Alerta</button>
       <Accordions />
+
       <Modal title='Configurar Alarma' stateModal={modalState} changeModalState={setModalState}>
         <Alert inputValues={inputsGetItem} closeModal={CloseAlertButton} />
       </Modal>
