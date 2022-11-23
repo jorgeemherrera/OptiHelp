@@ -36,9 +36,9 @@ const Alert = ({ inputValues, closeModal }) => {
         <>
             <div className='form-container'>
                 <label for="startTime">Hora inicial:</label>
-                <input type="time" name="startTime" id="startTime" value={startValue} onChange={e => onChangeInputTime(e.target.value, 'startTime')} />
+                <input type="time" name="startTime" id="startTime" value={startTime} onChange={e => onChangeInputTime(e.target.value, 'startTime')} />
                 <label for="endTime">Hora final:</label>
-                <input type="time" name="endTime" id="endTime" value={endValue} onChange={e => onChangeInputTime(e.target.value, 'endTime')} />
+                <input type="time" name="endTime" id="endTime" value={endTime} onChange={e => onChangeInputTime(e.target.value, 'endTime')} />
                     <button className='button-alert' onClick={closeModal}><IconBellRinging /> Crear Alerta</button> 
             </div>
         </>
