@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/optihelp/static/css/main.b1c89bf7.css",
-    "main.js": "/optihelp/static/js/main.d30179cd.js",
+    "main.js": "/optihelp/static/js/main.ba574b90.js",
     "static/js/787.64849957.chunk.js": "/optihelp/static/js/787.64849957.chunk.js",
     "static/media/food.png": "/optihelp/static/media/food.eb72a765f6ae83588ed4.png",
     "static/media/harmon.png": "/optihelp/static/media/harmon.aa4fea2230f722d54800.png",
@@ -23,11 +23,11 @@
     "static/media/miopia.png": "/optihelp/static/media/miopia.acb7a41e213e99c7c152.png",
     "index.html": "/optihelp/index.html",
     "main.b1c89bf7.css.map": "/optihelp/static/css/main.b1c89bf7.css.map",
-    "main.d30179cd.js.map": "/optihelp/static/js/main.d30179cd.js.map",
+    "main.ba574b90.js.map": "/optihelp/static/js/main.ba574b90.js.map",
     "787.64849957.chunk.js.map": "/optihelp/static/js/787.64849957.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1c89bf7.css",
-    "static/js/main.d30179cd.js"
+    "static/js/main.ba574b90.js"
   ]
 }
