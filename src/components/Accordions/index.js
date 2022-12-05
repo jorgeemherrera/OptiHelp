@@ -19,7 +19,7 @@ const Accordions = () => {
           value={0}
         >
           <section className='category-grid'>
-            <p>La higiene visual se denomina como un conjunto de prácticas diarias enfoncadas en cuidar
+            <p>La higiene visual se denomina como un conjunto de prácticas diarias enfocadas en cuidar
               la salud visual y ocular cuando usamos computadores, celulares, tablets, entre otros.
               ¿Quieres saber más? Mira la siguiente información
             </p>

@@ -62,12 +62,13 @@ a {
 .alert-success {
   background-color: $purple;
   border-radius: 8px;
+  bottom: 1rem;
+  box-shadow: 0px 9px 20px 2px #dee2f1;
   display: flex;
   opacity: 1;
-  transition: opacity 1s ease-out;
   padding: 0.5rem 1rem;
   position: fixed;
-  bottom: 1rem;
+  transition: opacity 1s ease-out;
   #alert {
     color: $white;
     position: relative;

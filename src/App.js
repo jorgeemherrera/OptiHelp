@@ -40,37 +40,35 @@ function App() {
   const onHandleClickAlert = () => {
     setModalState(!modalState);
   };
-  
+
   const convertTimeToMilliseconds = (value) => {
     return (+value[0] * (60000 * 60)) + (+value[1] * 60000)
-  }
+  };
 
-  let today = new Date();
-  let timeNow = today.getHours() + ":" + today.getMinutes();
-  let startTimeMilliseconds = (convertTimeToMilliseconds(String(startValue).split(":")));
-  let endTimeMilliseconds = (convertTimeToMilliseconds(String(endValue).split(":")));
-  let timeNowMilliseconds = (convertTimeToMilliseconds(String(timeNow).split(":")));
+  const foundTimeToRange = async () => {
+    let today = new Date();
+    let timeNow = await today.getHours() + ":" + today.getMinutes();
+    let startTimeMilliseconds = (convertTimeToMilliseconds(String(startValue).split(":")));
+    let endTimeMilliseconds = (convertTimeToMilliseconds(String(endValue).split(":")));
+    let timeNowMilliseconds = (convertTimeToMilliseconds(String(timeNow).split(":")));
+    const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + (i * step));
 
-  const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + (i * step));
+    let hoursRange = range(startTimeMilliseconds, endTimeMilliseconds, 60000);
 
-  let hoursRange = range(startTimeMilliseconds, endTimeMilliseconds, 60000);
-
-  const foundTimeToRange = () => {
-    let foundTimeInRange = hoursRange.find(timeAlert => timeAlert === timeNowMilliseconds);
+    let foundTimeInRange = await hoursRange.find(timeAlert => timeAlert === timeNowMilliseconds);
 
     if (foundTimeInRange) {
       toast.info('¡¡¡Es hora de descansar tus ojos!!! Recuerda mirar a 6 metros durante 20 segundos', {
         position: toast.POSITION.TOP_RIGHT
       });
     }
-    console.log('foundTimeInRange', foundTimeInRange)
-  }
+    console.log('foundTimeInRange', foundTimeInRange);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
       foundTimeToRange();
-      console.log('foundTimeToRange', foundTimeToRange());
-    }, 62000);
+    }, 61500);
     return () => clearInterval(interval);
   });
 

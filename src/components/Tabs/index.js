@@ -53,8 +53,13 @@ const TabsTipsHigiene = () => {
                             deslumbramiento. Esto te ayudará a tener una visión de mayor calidad. (AR convencional)
                         </p>
                         <p>
-                            Además, existen AR que protegen los ojos de la luz azul de las pantallas reduciendo la
-                            cantidad de luz que reciben los ojos.
+                            Existen AR filtro azul que protegen los ojos de la radiacion emitida por la luz azul de las pantallas,
+                            esta luz puede provocar estrés visual y fatiga ocular, este tipo de AR nos ayudan a evitar estos
+                            sintomas. <br />
+                            Además, también brindan protección a la retina, ya que este tipo de luz causa acumulación que
+                            con el paso del tiempo puede provocar graves consecuencias en dicha estructura.<br />
+                            ¡¡¡No olvides consultar con tu optómetra de confianza para que te prescriba el AR adecuado para
+                            ti!!!
                         </p>
                         <ImageParentSlide />
                     </section>
@@ -145,7 +150,8 @@ const TabsTipsHigiene = () => {
                     <section className='category-grid'>
                         <p> Es necesario hacer pausas activas para disminuir el uso excesivo de
                             la visión próxima y así se permite relajar la acomodación y disminuir el estrés
-                            visual
+                            visual. <br />
+                            Esto es llamado la regla 20/20/20
                         </p>
                         <img src={twentyMinutes} alt='' />
                         <DownloadPdf />
@@ -182,7 +188,7 @@ const TabsTipsHigiene = () => {
                             <ul className="ul-tabs">
                                 <li>Vegetales de hojas verdes y frutas coloridas</li>
                                 <li>Frutos secos como almendras y nueces</li>
-                                <li>Mariscos como la principal fuente de carne</li>
+                                <li>Pescado como principal fuente de proteína</li>
                                 <li>Grasas saludables. Elija aceite de oliva en vez de la mantequilla</li>
                                 <li>Pan, cereales y pastas integrales</li>
                                 <li>Agregar muchas hierbas y especias a los alimentos para reducir la ingesta de</li>
